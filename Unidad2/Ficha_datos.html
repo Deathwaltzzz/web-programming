@@ -1,0 +1,34 @@
+<!-- Este documento html servira para crear un forms
+    Autor: Leonardo Contreras Martinez-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ficha de datos</title>
+    </head>
+    <body>
+        <h1 align="center"><font face="Forte"> Ficha de datos</font></h1>
+        <font face="Comic Sans MS">
+        <form action="ejemplo.php" method="get">
+            <p>Nombre: <input type="text" name="nombre" size="30"></p>
+            <p>Apellido paterno: <input type="text" name="apPaterno" size="30"> &nbsp Apellido materno:&nbsp <input type="text" name="apMaterno" size="30"></p>
+            <p>Domicilio:&nbsp <input type="text" name="domicilio" size="30"></p>
+            <p>Sexo: &emsp;&emsp;
+                Hombre: <input type="radio" name="hm" value="h">
+                Mujer: <input type="radio" name="hm" value="m">
+            </p>
+            <br>
+            <p>Pelicula favorita:
+                <ul>
+                    <li>Transformers: La venganza de los caidos: <input type="checkbox" name="favPeli"></li>
+                    <li>Joker: <input type="checkbox" name="favPeli"></li>
+                    <li>The batman: <input type="checkbox" name="favPeli"></li>
+                </ul>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" vaLue="Borrar datos">
+            </p>
+        </form>
+        </font>
+    </body>
+</html>

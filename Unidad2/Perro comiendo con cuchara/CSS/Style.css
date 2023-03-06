@@ -1,0 +1,66 @@
+/**********************************************************************/
+/* Este es un documento de CSS el cual nos ayudara a
+    dar formato a nuestro archivo de html - Perro comiendo cuchara
+    Autor: Leonardo COntreras Martinez
+ */
+/**********************************************************************/
+
+/**********************************/
+/* Formato de las etiquetas body */
+/**********************************/
+body.PerroComiendoCuchara{
+    /*Setear el fondo*/
+    background-image:url("../res/HD-wallpaper-south-park-korn-cartman-stan-kyle.jpg");
+    /*Que el fondo no se repita*/
+    background-repeat:no-repeat;
+    /*CAmbiamos el tamaño del fondo*/
+    background-size:100%;
+    /*Hacer que el fondo no sea estatico*/
+    background-attachment: fixed;
+    /*Darle un espaciado lateral*/
+    margin: auto;
+    width: 70%;
+}
+
+/***************************************************************/
+/* Formato de bordes                                           */
+/***************************************************************/
+p.bordeTitulo{
+    /*border-style: inset;*/
+    border: 5px navajowhite inset;
+    border-radius: 25px;
+}
+
+
+/**********************************/
+/* Formato de las letras body */
+/**********************************/
+font.colorBlanco{
+    color:antiquewhite;
+    /*Cambiamos el tamaño de la fuente*/
+    font-size: 30px;
+    /*Centrar el texto*/
+    text-align: center;
+    /*Agregamos un grosor al borde*/
+    border-width: 5px;
+    /* Estilo de fuente*/
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/***********************************/
+/* Image                           */
+/***********************************/
+img.pepo{
+    content:url("../res/pepo.gif");
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}

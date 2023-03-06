@@ -1,0 +1,32 @@
+<!--Este doc de html sera un ejemplo de como usar formularios
+    Autor: Leonardo Contreras Martinez-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <!-- Establecemos un formulario-->
+        <form action="ejemplo.php" method="get">
+            <p align="center">Nombre:&nbsp <input type="text" size="40" name="nombre"></p>
+            <p align="center">Apellido paterno: <input type="text" name="apPaterno" size="30"></p>
+            <p align="center">Año de nacimiento:&nbsp<input type="number" size="50" name="nacido" min="1900"></p>
+            <p align="center">Sexo:
+                <!--El atributo name ayuda a identificar la seccuin de ese grupo de radio button-->
+                <input type="radio" name="hm" value="h">hombre
+                <input type="radio" name="hm" value="m">mujer
+            </p>
+            <p align="center">
+                <p align="center">Que mascota prefieres?</p>
+                <input type="radio" name="mascota" value="perro">Perro
+                <input type="radio" name="mascota" value="mujer">Gato
+            </p>
+            <p align="center">
+                <!--El valor del atributo value es el label del boton-->
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </p>
+        </form>
+    </body>
+</html>

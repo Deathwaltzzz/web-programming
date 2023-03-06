@@ -1,0 +1,78 @@
+/*******************************************/
+/* Este css nos permitira darle estilo a   */
+/* nuestro html divtags                    */
+/*******************************************/
+
+/*******************************************/
+/* Este bloque correspondera a la primer   */
+/* divison del lado izquierdo              */
+/*******************************************/
+
+div.bloqueIzq{
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: inline-block;
+    margin: 0;
+}
+
+/*******************************************/
+/* Este bloque correspondera a la segunda  */
+/* divison del lado derecho                */
+/*******************************************/
+
+div.bloqueDer{
+    width:50%;
+    height:100%;
+    float: right;
+    display: inline-block;
+    margin: 0;
+}
+
+/**************************************************/
+/* Este bloque contiene el texto de contenido Y   */
+/**************************************************/
+
+div.contY{
+    width: 90%;
+    height: 100%;
+    margin: 20px;
+    padding: 10px;
+    border: 5px green dotted;
+}
+
+/*Este bloque contiene el texto del contenido X*/
+div.contX{
+    width:50%;
+    height: 100%;
+    margin:10px;
+    padding:10px;
+    border: red dashed;
+}
+
+/*Este bloque contiene el texto del contenido R*/
+div.contR{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin:0;
+    border: 7px purple solid;
+}
+
+/*Este bloque contiene el texto del contenido G*/
+div.contG{
+    width: 100%;
+    height: 100%;
+    margin: 15px;
+    padding: 0;
+    border: 2px groove yellow;
+}
+
+/*Este bloque contiene el texto del contenido T*/
+div.contT{
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    padding: 10px;
+    border: 5px double blue;
+}
