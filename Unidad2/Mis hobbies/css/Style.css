@@ -5,32 +5,45 @@
 /********************************************/
 
 div.header{
-    position:static;
     width: 100%;
     height: 30%;
+    display:grid;
     top: 0;
-    border: green 10px dotted;
+    vertical-align: center;
+    border: black solid 1px;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,253,185,0.8085434857536764) 50%, rgba(252,176,69,1) 100%);
+    border-radius:30px
 }
 
 div.izq{
     float: left;
-    /*top: 50%;*/
-    width: 20%;
-    height: 70%;
-    display: inline-block;
-    border: red dotted 5px;
-    margin:0;
-    padding:10px;
-    overflow: auto;
-    position: fixed;
+    margin:10px auto;
+    width: 30%;
+    background: rgb(48,42,48);
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(48,42,48,1) 0%, rgba(45,212,253,0.7469188358937324) 100%);
+    border-radius: 30px;
+    padding-bottom: 5%;
 }
-
+/*Este bloque div es aprox el 70% del documento web apartir del 30% de lo que marca el margen y el otro 30% del div izquierdo, aqui vendra el contenido principal
+de la pagina web, tiene un atributo de 59% en la propiedad width debido a que queria dejar un espaciado entre todos los divs.
+Cuenta con un inner scroll, por eso tiene una propiedad height que marque un 40vw.
+ */
 div.resto{
-    margin:0;
-    width:70%;
-    height:70%;
-    border: black dashed 5px;
+    width: 59%;
+    height: 40vw;
     float:right;
+    margin:10px auto;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right:5%;
+    display: inline-block;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,0.4780112728685224) 100%);
+    overflow-y:scroll;
+    border-radius: 30px;
+
 }
 
 font.colorRojo{
@@ -44,12 +57,13 @@ font.colorRojo{
 p.titulos{
     font-family: 'Permanent Marker', cursive;
     font-size: 30px;
+    color: black;
 }
 
 p.content{
     font-size: 20px;
     font-family: "Comic Sans MS";
-
+    color: bisque;
 }
 
 p.header{
@@ -61,4 +75,53 @@ ul.indice{
     font-family: "Comic Sans MS";
     color: black;
     font-size: 20px;
+}
+
+ul.listas{
+    font-family: 'Shantell Sans', cursive;
+    color: navajowhite;
+    font-size: 20px;
+}
+
+body.hobbies{
+    background-image:url("../res/imgs/kirby-game-art-4k-wallpaper-uhdpaper.com-462@0@h.jpg");
+    background-size:100%;
+    background-attachment: fixed;
+}
+
+img.imagenes{
+    width: auto;
+    height: 100px;
+}
+
+img.imagenesSolo{
+    width: auto;
+    height: 200px;
+}
+
+img.kirbyGif{
+    content:url("../res/gifs/kirby.gif");
+    width: auto;
+    height: 100px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 30px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
