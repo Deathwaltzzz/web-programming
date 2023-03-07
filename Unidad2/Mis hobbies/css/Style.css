@@ -11,15 +11,17 @@ body.hobbies{
     background-image:url("../res/imgs/kirby-game-art-4k-wallpaper-uhdpaper.com-462@0@h.jpg");
     background-size:100%;
     background-attachment: fixed;
+
 }
 /**Div encargado de mostrar el header de la pagina*/
 
 div.header{
-    width: 100%;
-    height: 30%;
+    width: 50%;
+    height: 100%;
     display:grid;
     top: 0;
     vertical-align: center;
+    margin: auto;
     border: black solid 1px;
     background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,253,185,0.8085434857536764) 50%, rgba(252,176,69,1) 100%);
@@ -31,12 +33,15 @@ Contiene un indice de los temas que se abordan dentro de la pagina con un anchor
 div.izq{
     float: left;
     margin:10px auto;
+    display: inline-block;
     width: 30%;
-    background: rgb(48,42,48);
+    height: fit-content;
     justify-content: center;
-    background: linear-gradient(0deg, rgba(48,42,48,1) 0%, rgba(45,212,253,0.7469188358937324) 100%);
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,45,246,0.7215218851212359) 100%);
     border-radius: 30px;
     padding-bottom: 5%;
+    overflow-y:scroll;
 }
 /*Este bloque div es aprox el 70% del documento web apartir del 30% de lo que marca el margen y el otro 30% del div izquierdo, aqui vendra el contenido principal
 de la pagina web, tiene un atributo de 59% en la propiedad width debido a que queria dejar un espaciado entre todos los divs.
@@ -56,6 +61,15 @@ div.resto{
     overflow-y:scroll;
     border-radius: 30px;
 
+}
+
+div.bottom{
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    margin-top: 40%;
+    padding-top: 10%;
+    justify-content: center;
 }
 /*
 Font utiizada para el titulo "indice"
@@ -138,23 +152,30 @@ img.logo{
     width: auto;
     height: 50px;
 }
+
+a.color{
+    color:white;
+}
 /*
 Esta parte es la qque use para modificar el scrollbar de la pagina*/
 /* width */
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 0.5vw;
+    height: 0.5w;
     border-radius: 30px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
     background: transparent;
+    border-radius: 50px;
+    height: 70%;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #888;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 /* Handle on hover */
