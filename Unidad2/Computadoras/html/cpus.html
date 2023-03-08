@@ -4,23 +4,150 @@
 <html lang="en">
     <head>
         <title>CPUS</title>
+        <meta charset="UTF-8">
         <link type="text/css" rel="stylesheet" href="../css/style.css" media="screen">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <div class="headerCpu">
-            <div class="tituloCpu">
-                <p class="titulosCpu">CPU's</p>
-            </div>
-            <div class="indexCpu">
-                <ul>
-                    <li>
-                        <a href="#AMD">AMD</a>
+    <body class="cpus">
+        <script src="../JS/main.js"></script>
+        <header>
+            <nav>
+                <p class="titulosCpu"> <img class="logo" src="../media/imgs/cpu.png">Cpus</p>
+                <ul class="tabs">
+                    <li class="tab is-active">
+                        <a data-switcher data-tab="1">AMD</a>
                     </li>
-                    <li>
-                        <a href="#INTEL">Intel</a>
+                    <li class="tab">
+                        <a data-switcher data-tab="2">Intel</a>
                     </li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
+        <main>
+            <section class="pages">
+                <div class="page is-active" data-page="1">
+                    <div class="indexAmd">
+                        <ul class="listAmd">
+                            <li>
+                                Historia procesador AMD
+                            </li>
+                            <li>
+                                Am2901
+                            </li>
+                            <li>
+                                AMD 2900
+                            </li>
+                            <li>
+                                No x-86
+                            </li>
+                            <li>
+                                Arquitectura x86
+                            </li>
+                            <li>
+                                Zen core
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="centralBodyAmd">
+                        <p class="titleBody" align="center">Historia<br>
+                        <img class="images" src="../media/imgs/AMD_Logo.svg-removebg-preview.png"></p>
+                        <p class="contentBody">AMD (Advanced Micro Devices) es una empresa de semiconductores fundada en 1969 en Sunnyvale, California, Estados Unidos. A lo largo de su historia, AMD ha competido con Intel en el mercado de procesadores para computadoras personales, y ha lanzado muchos productos innovadores.
+                            Una de las historias más interesantes de AMD ocurrió en la década de 1990, cuando la empresa lanzó su procesador AMD K5. Este procesador estaba destinado a competir con los procesadores de Intel, pero su lanzamiento fue problemático. En primer lugar, el K5 tuvo dificultades para cumplir con las expectativas de rendimiento de AMD, lo que llevó a retrasos en su lanzamiento.
+                            Luego, cuando el K5 finalmente se lanzó, se encontró con un problema de marketing. AMD había utilizado el término "Pentium" en su publicidad para describir el rendimiento del K5, lo que llevó a una demanda de Intel que afirmaba que AMD estaba infringiendo su marca registrada. Como resultado, AMD tuvo que cambiar su publicidad y dejar de utilizar el término "Pentium".
+                            A pesar de estos problemas iniciales, el K5 se convirtió en un éxito para AMD y estableció la empresa como un competidor serio en el mercado de procesadores para computadoras personales. AMD continuó lanzando procesadores innovadores en las décadas siguientes, como el Athlon en la década de 2000 y el Ryzen en la década de 2010.
+                            En la actualidad, AMD es una empresa líder en el mercado de procesadores y ha lanzado productos como el Ryzen Threadripper, que ofrece un rendimiento impresionante para usuarios avanzados y creadores de contenido. La historia de AMD es una historia de innovación y competencia en el mercado de procesadores, y la empresa sigue siendo un jugador importante en la industria de la tecnología.
+                        </p>
+                        <p class="titleBody" align="center" id="Am2901">Am2901</p>
+                        <p class="contentBody">
+                            El AMD Am2901 es un procesador lógico de bits de 4 bits que se utilizó en una variedad de aplicaciones de sistemas digitales, incluidos microprocesadores, controladores de dispositivos y procesadores de señales. A continuación, se detallan algunas de las características del Am2901:
+                            <ol>
+                                <li>
+                                    Arquitectura de procesador de bits: el Am2901 es un procesador de bits de 4 bits, lo que significa que opera en grupos de 4 bits en lugar de 8 o 16 bits.
+                                </li>
+                                <li>
+                                    Diseño modular: el Am2901 está diseñado para ser utilizado en módulos interconectables, lo que permite la creación de procesadores más grandes y complejos mediante la conexión de varios módulos.
+                                </li>
+                                <li>
+                                    Funcionalidad aritmética: el Am2901 cuenta con una amplia gama de funciones aritméticas y lógicas, lo que lo convierte en una herramienta muy útil para aplicaciones que requieren cálculos precisos.
+                                </li>
+                                <li>
+                                    Velocidad de reloj: el Am2901 es capaz de operar a velocidades de reloj de hasta 100 MHz, lo que lo hace ideal para aplicaciones que requieren un alto rendimiento.
+                                </li>
+                                <li>
+                                    Bajo consumo de energía: a pesar de su alto rendimiento, el Am2901 consume muy poca energía, lo que lo hace ideal para aplicaciones en dispositivos con baterías.
+                                </li>
+                                <li>
+                                    Soporte para múltiples modos de operación: el Am2901 admite varios modos de operación, lo que lo hace muy versátil y adecuado para una amplia gama de aplicaciones.
+                                </li>
+                            </ol>
+                        </p>
+                            <p align="center" class="footerImage">
+                                <img class="cpus" src="../media/imgs/Am2901.png"><br>
+                                Procesador Am2901
+                            </p>
+                        <p class="contentBody">
+                            En resumen, el Am2901 de AMD es un procesador lógico de bits de 4 bits que es conocido por su arquitectura modular, su amplia gama de funciones aritméticas y lógicas, su alto rendimiento y su bajo consumo de energía. Estas características lo hacen ideal para una amplia gama de aplicaciones en sistemas digitales.
+                        </p>
+                        <p class="titleBody" align=center id="AMD2900">AMD 2900</p>
+                        <p class="contentBody">
+                            El AMD 2900 es una familia de chips de circuitos integrados diseñados por Advanced Micro Devices (AMD) en la década de 1970 y 1980. Estos chips se utilizaron en una variedad de aplicaciones, incluidos sistemas informáticos, equipos de comunicaciones y sistemas militares.<br>
+                            Las características del AMD 2900 incluyen:
+                        <ol>
+                            <li>
+                                Arquitectura de procesamiento de datos en serie de alta velocidad, que permitía el procesamiento de datos en tiempo real.
+                            </li>
+                            <li>
+                                Diseño de chip altamente modular y escalable, lo que permitía la creación de sistemas informáticos personalizados para satisfacer las necesidades de aplicaciones específicas.
+                            </li>
+                            <li>
+                                Capacidad para operar a velocidades de reloj muy altas, lo que lo hacía adecuado para aplicaciones de procesamiento de señales de alta velocidad.
+                            </li>
+                            <li>
+                                Tecnología CMOS (complementary metal-oxide-semiconductor), que reducía la disipación de energía y el consumo de energía.
+                            </li>
+                        </ol>
+                        </p>
+                        <p class="footerImage" align="center"><img class="cpus" src="../media/imgs/amd2900.png"><br>Amd 2900</p>
+                        <p class="contentBody">
+                            La historia del AMD 2900 se remonta a la década de 1970, cuando AMD comenzó a diseñar circuitos integrados personalizados para el mercado militar. En 1975, AMD lanzó el primer chip de la serie 2900, el AM2901, que se convirtió en un gran éxito. Este chip se utilizó en una amplia variedad de sistemas, incluidos los sistemas de defensa y los sistemas informáticos.
+                            A medida que la serie 2900 creció, AMD continuó mejorando y expandiendo la familia de chips. En 1980, AMD lanzó el AM2903, que fue el primer chip de microprocesador de la compañía. En 1982, AMD lanzó el AM29000, que fue el primer microprocesador de 32 bits de la compañía y se convirtió en una parte integral de muchos sistemas informáticos y de control industrial.
+                            A lo largo de la década de 1980, AMD continuó mejorando la serie 2900 y lanzó una serie de nuevos chips, incluido el AM2909, que fue uno de los primeros chips de lógica programable de campo (FPLA), y el AM29116, que fue uno de los primeros chips de memoria RAM estática (SRAM) de alta velocidad.
+                            En resumen, el AMD 2900 es una familia de chips de circuitos integrados altamente modulares y escalables que se utilizaron en una variedad de aplicaciones en la década de 1970 y 1980. Estos chips ofrecían capacidades de procesamiento en tiempo real, alta velocidad y tecnología CMOS de baja potencia, lo que los hacía adecuados para una amplia gama de aplicaciones.
+                        </p>
+                        <p class="titleBody" id="noX86" align="center">No X-86</p>
+                        <p class="contentBody">
+                            La arquitectura no-x86 de AMD se refiere a los procesadores de la compañía que no están basados en la arquitectura x86 de Intel. Algunas de las características de la arquitectura no-x86 de AMD incluyen:
+                        <ol>
+                            <li>
+                                Diseño RISC (Reduced Instruction Set Computing): A diferencia de la arquitectura x86 que utiliza un conjunto de instrucciones complejas, la arquitectura no-x86 de AMD utiliza un conjunto de instrucciones reducido y más simples, lo que permite un procesamiento más rápido y eficiente.
+                            </li>
+                            <li>
+                                Mayor eficiencia energética: Los procesadores de la arquitectura no-x86 de AMD son conocidos por tener una mayor eficiencia energética que los procesadores x86. Esto se debe en parte al diseño RISC y a la tecnología de fabricación avanzada utilizada en la producción de estos procesadores.
+                            </li>
+                            <li>
+                                Utilización en servidores y centros de datos: La arquitectura no-x86 de AMD también se utiliza en servidores y centros de datos. La eficiencia energética y el diseño RISC son beneficiosos en este entorno, ya que permiten un procesamiento más rápido y eficiente, lo que puede reducir el consumo de energía y el costo total de propiedad.                            <li>
+                                Tecnología CMOS (complementary metal-oxide-semiconductor), que reducía la disipación de energía y el consumo de energía.
+                            </li>
+                            <li>
+                                Variedad de arquitecturas: La arquitectura no-x86 de AMD abarca una variedad de arquitecturas, incluyendo ARM, MIPS y PowerPC, lo que permite a la compañía ofrecer soluciones personalizadas a diferentes clientes y aplicaciones.
+                            </li>
+                        </ol>
+                        </p>
+                        <p class="contentBody">
+                            En resumen, la arquitectura no-x86 de AMD se caracteriza por su diseño RISC, mayor eficiencia energética, uso en dispositivos móviles, servidores y centros de datos, y su variedad de arquitecturas que permite soluciones personalizadas para diferentes clientes y aplicaciones.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="page" data-page="2">
+                    <div class="indexIntel">
+                        s
+                    </div>
+                    a
+                </div>
+            </section>
+        </main>
     </body>
 </html>

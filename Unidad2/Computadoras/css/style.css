@@ -1,49 +1,196 @@
-body.cpus{
-
+*{
+    font-family: 'Indie Flower', cursive;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
 
-div.headerCpu{
-    top: 0;
-    height: 100%;
+html{
+    margin: 0px;
+    padding: 0px;
     width: 100%;
-    background: crimson;
-    display: inline-block;
-    overflow: hidden;
+    height: 100%;
+    overflow-x: hidden;
 }
 
-div.tituloCpu{
-    height: 100%;
-    width: 30%;
-    float: left;
-    position: relative;
-    overflow: hidden;
-    border: 1px black solid;
+body.cpus{
+    background-image: url("../media/imgs/wallpaper.jpg");
+}
+
+header{
+    background: rgb(174,193,238);
+    background: linear-gradient(130deg, rgba(174,193,238,1) 0%, rgba(246,20,20,0.7301120277212447) 100%);
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+header nav .tabs{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10px;
+}
+
+header nav .tabs .tab{
+    display: block;
+    font-family: 'Indie Flower', cursive;
+    border-radius: 10px;
+}
+
+header nav .tabs .tab a[data-switcher]{
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: royalblue;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+header nav .tabs .tab:hover a[data-switcher]{
+    background: rgb(251,63,135);
+    background: radial-gradient(circle, rgba(251,63,135,1) 0%, rgba(70,124,252,0.4780112728685224) 100%);
+}
+header nav .tabs .tab.is-active a[data-switcher]{
+    background: rgb(251,63,135);
+    background: radial-gradient(circle, rgba(251,63,135,1) 0%, rgba(70,124,252,0.4780112728685224) 100%);
+    font-weight: 700;
 }
 
 p.titulosCpu{
-    font-size: 40px;
-    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Fredoka One', cursive;
 }
-
-div.indexCpu{
+div.indexAmd{
+    float:left;
     height: 100%;
-    width: 50%;
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    margin: 50px;
-    float: right;
+    width: 20vw;
+    padding-left: 1px;
+    border-radius: 10px;
+    background-image: linear-gradient( 179.4deg,  rgba(132,56,122,1) 14.6%, rgba(190,24,49,1) 104.7% );
+    margin-right: 10px;
+}
+
+div.indexIntel{
+    float:left;
+    height: 30vw;
+    width: 20vw;
+    padding-left: 10px;
+    border-radius: 10px;
+    background-color: blue;
+    box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
+    margin-right: 10px;
+}
+
+div.centralBodyAmd{
+    width: 70%;
+    height: 40vw;
+    background-image: radial-gradient( circle 860px at 11.8% 33.5%,  rgba(240,30,92,1) 0%, rgba(244,49,74,1) 30.5%, rgba(249,75,37,1) 56.1%, rgba(250,88,19,1) 75.6%, rgba(253,102,2,1) 100.2% );
+    margin-left: 22vw;
+    border-radius: 20px;
+    padding-left: 20px;
+    overflow-y: scroll;
+    box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
+}
+
+div.centralBodyIntel{
+    width: 70%;
+    height: 40vw;
+    background: rgb(174,193,238);
+    background: linear-gradient(130deg, rgba(174,193,238,1) 0%, rgba(255,255,255,0.6320728120349702) 100%);
+    margin-left: 22vw;
+    border-radius: 20px;
+    padding-left: 20px;
+    overflow-y: scroll;
+    box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
+}
+
+p.contentBody{
+    padding-top:10px;
+    font-size: 2vw;
     justify-content: center;
-    border: 1px black solid;
+    padding-bottom: 10px;
+    text-align: justify;
+    text-justify: auto;
+    margin-right: 20px;
 }
 
-ul {
+p.footerImage{
+    font-size: 1vw;
+    padding-bottom: 2px;
+    color:navajowhite;
+}
+
+p.titleBody{
+    padding-top:10px;
+    margin: 0 auto;
+    font-size: 3vw;
+}
+
+ul.listAmd{
+    font-size: 1.5vw;
+    color:antiquewhite;
+}
+
+ul.listAmd li{
     list-style-type: none;
+    border-bottom: 1px solid black;
+    padding: 5px 8px;
+    border-radius: 10px;
 }
 
-li a{
+ol{
+    font-size: 1.8vw;
+    color: antiquewhite;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+ol li{
+    margin-bottom: 5px;
+}
+img.logo{
+    height: 50px;
+    width: 50px;
+}
+
+img.images{
+    height: 3vw;
+    width: auto;
+}
+
+img.cpus{
+    height: 10vw;
+    width: auto;
+}
+main{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.pages{
+    margin-top:0px;
+    padding: 50px 30px;
+    background: rgb(174,193,238);
+    background: linear-gradient(130deg, rgba(174,193,238,1) 0%, rgba(255,255,255,0.6320728120349702) 100%);
+    box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    height: 55vw;
+}
+
+.pages .page{
+    display: none;
+}
+
+.pages .page.is-active{
     display: block;
-    float: left;
-    padding: 10px 8px;
-    list-style-type: none;
 }

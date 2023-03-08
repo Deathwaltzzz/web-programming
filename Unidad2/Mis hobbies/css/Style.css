@@ -112,6 +112,20 @@ ul.indice{
     font-family: "Comic Sans MS";
     color: black;
     font-size: 20px;
+    list-style-type: none;
+    padding:0;
+}
+
+ul a{
+    border: 2px solid transparent;
+    padding: 8px 16px;
+    border-radius: 50px;
+    /*border-image: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,45,246,0.7215218851212359) 100%) 1;*/
+}
+
+ul a:active{
+    background-color: #04AA6D;
+    color: white;
 }
 /*
 Unordered List utilizada para las demas listas del doc
@@ -161,7 +175,7 @@ Esta parte es la qque use para modificar el scrollbar de la pagina*/
 /* width */
 ::-webkit-scrollbar {
     width: 0.5vw;
-    height: 0.5w;
+    height: 0.5vw;
     border-radius: 30px;
 }
 
