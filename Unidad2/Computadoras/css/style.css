@@ -1,0 +1,49 @@
+body.cpus{
+
+}
+
+div.headerCpu{
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: crimson;
+    display: inline-block;
+    overflow: hidden;
+}
+
+div.tituloCpu{
+    height: 100%;
+    width: 30%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    border: 1px black solid;
+}
+
+p.titulosCpu{
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+div.indexCpu{
+    height: 100%;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin: 50px;
+    float: right;
+    justify-content: center;
+    border: 1px black solid;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a{
+    display: block;
+    float: left;
+    padding: 10px 8px;
+    list-style-type: none;
+}
