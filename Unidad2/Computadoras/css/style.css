@@ -338,12 +338,13 @@ main{
 
 .pages{
     margin-top:0px;
-    padding: 2vw 3vw;
+    padding-left: 4rem;
+    padding-top: 3rem;
     background: rgb(174,193,238);
     background: linear-gradient(130deg, rgba(174,193,238,1) 0%, rgba(255,255,255,0.6320728120349702) 100%);
     box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
     border-radius: 10px;
-    height: 48.9em;
+    height: 51rem;
     width: 100%;
 }
 
@@ -359,10 +360,10 @@ main{
     display: block;
     margin-top:0px;
     margin-left: 20vw;
-    padding: 4vw 2vw;
+    padding: 2vw 1vw;
     background: black;
     box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
-    border-radius: 10px;
+    border-radius: 50px;
     height: 43em;
     width: 60em;
 }
@@ -382,10 +383,11 @@ main{
 div.container{
     margin-left: 0.5em;
     margin-right: 0.5em;
-    width: 55em;
-    height: 35em;
+    margin-bottom: 0.5rem;
+    width: 57em;
+    height: 40em;
     border-radius: 50px;
-    padding: 1vw 4vw;
+    padding: 1vw 3vw;
 }
 
 div.container.nvidia{
