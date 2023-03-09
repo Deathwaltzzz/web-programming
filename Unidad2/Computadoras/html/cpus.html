@@ -30,29 +30,29 @@
                 <div class="page is-active" data-page="1">
                     <div class="indexAmd">
                         <ul class="listAmd">
-                            <li>
+                            <li><a href="#Historia">
                                 Historia procesador AMD
-                            </li>
-                            <li>
+                            </a></li>
+                            <li><a href="#Am2901">
                                 Am2901
-                            </li>
-                            <li>
+                            </a></li>
+                            <li><a href="#AMD2900">
                                 AMD 2900
-                            </li>
-                            <li>
+                            </a></li>
+                            <li><a href="#noX86">
                                 No x-86
-                            </li>
-                            <li>
-                                Arquitectura x86
-                            </li>
-                            <li>
+                            </a></li>
+                            <li><a href="#zen">
                                 Zen core
-                            </li>
+                            </a></li>
+                            <li><a href="#listaCpus">
+                                Lista de procesadores
+                            </a></li>
                         </ul>
                     </div>
                     <div class="centralBodyAmd">
                         <p class="titleBody" align="center">Historia<br>
-                        <img class="images" src="../media/imgs/AMD_Logo.svg-removebg-preview.png"></p>
+                        <img class="images" src="../media/imgs/AMD_Logo.svg-removebg-preview.png" id="Historia"></p>
                         <p class="contentBody">AMD (Advanced Micro Devices) es una empresa de semiconductores fundada en 1969 en Sunnyvale, California, Estados Unidos. A lo largo de su historia, AMD ha competido con Intel en el mercado de procesadores para computadoras personales, y ha lanzado muchos productos innovadores.
                             Una de las historias más interesantes de AMD ocurrió en la década de 1990, cuando la empresa lanzó su procesador AMD K5. Este procesador estaba destinado a competir con los procesadores de Intel, pero su lanzamiento fue problemático. En primer lugar, el K5 tuvo dificultades para cumplir con las expectativas de rendimiento de AMD, lo que llevó a retrasos en su lanzamiento.
                             Luego, cuando el K5 finalmente se lanzó, se encontró con un problema de marketing. AMD había utilizado el término "Pentium" en su publicidad para describir el rendimiento del K5, lo que llevó a una demanda de Intel que afirmaba que AMD estaba infringiendo su marca registrada. Como resultado, AMD tuvo que cambiar su publicidad y dejar de utilizar el término "Pentium".
@@ -83,10 +83,14 @@
                                 </li>
                             </ol>
                         </p>
-                            <p align="center" class="footerImage">
-                                <img class="cpus" src="../media/imgs/Am2901.png"><br>
-                                Procesador Am2901
-                            </p>
+                        <div class="cpus" align="center">
+                            <img class="cpus" src="../media/imgs/Am2901.png"><br>
+                            <div class="overlay">
+                                <div class="text"><p align="center" class="footerImage">
+                                    <a href="https://es.wikipedia.org/wiki/Am2901" target="_blank">Procesador Am2901</a>
+                                </p></div>
+                            </div>
+                        </div>
                         <p class="contentBody">
                             En resumen, el Am2901 de AMD es un procesador lógico de bits de 4 bits que es conocido por su arquitectura modular, su amplia gama de funciones aritméticas y lógicas, su alto rendimiento y su bajo consumo de energía. Estas características lo hacen ideal para una amplia gama de aplicaciones en sistemas digitales.
                         </p>
@@ -109,7 +113,14 @@
                             </li>
                         </ol>
                         </p>
-                        <p class="footerImage" align="center"><img class="cpus" src="../media/imgs/amd2900.png"><br>Amd 2900</p>
+                        <div class="cpus" align="center">
+                            <img class="cpus" src="../media/imgs/amd2900.png"><br>
+                            <div class="overlay">
+                                <div class="text"><p align="center" class="footerImage">
+                                    <a href="https://es.wikipedia.org/wiki/AMD_29000" target="_blank">Procesador Amd 29000</a>
+                                </p></div>
+                            </div>
+                        </div>
                         <p class="contentBody">
                             La historia del AMD 2900 se remonta a la década de 1970, cuando AMD comenzó a diseñar circuitos integrados personalizados para el mercado militar. En 1975, AMD lanzó el primer chip de la serie 2900, el AM2901, que se convirtió en un gran éxito. Este chip se utilizó en una amplia variedad de sistemas, incluidos los sistemas de defensa y los sistemas informáticos.
                             A medida que la serie 2900 creció, AMD continuó mejorando y expandiendo la familia de chips. En 1980, AMD lanzó el AM2903, que fue el primer chip de microprocesador de la compañía. En 1982, AMD lanzó el AM29000, que fue el primer microprocesador de 32 bits de la compañía y se convirtió en una parte integral de muchos sistemas informáticos y de control industrial.
@@ -138,14 +149,106 @@
                         <p class="contentBody">
                             En resumen, la arquitectura no-x86 de AMD se caracteriza por su diseño RISC, mayor eficiencia energética, uso en dispositivos móviles, servidores y centros de datos, y su variedad de arquitecturas que permite soluciones personalizadas para diferentes clientes y aplicaciones.
                         </p>
-
+                        <p class="titleBody" align="center" id="zen">Arquitectura Zen</p>
+                        <p class="contentBody">
+                            La arquitectura Zen de AMD es una arquitectura de procesador de 64 bits que se utiliza en sus procesadores Ryzen, EPYC y Threadripper. Algunas de las características más importantes de la arquitectura Zen son:
+                        <ol>
+                            <li>
+                                Núcleos de CPU: los procesadores basados en la arquitectura Zen pueden tener hasta 16 núcleos de CPU, cada uno de los cuales tiene dos subprocesos, lo que permite hasta 32 subprocesos en un solo procesador.
+                            </li>
+                            <li>
+                                Tecnología de proceso FinFET de 14nm: La arquitectura Zen se fabrica utilizando tecnología de proceso de 14nm FinFET, que proporciona una eficiencia energética mejorada y una mayor velocidad de reloj en comparación con los procesadores anteriores de AMD.
+                            </li>
+                            <li>
+                                Cache L3 unificado: la arquitectura Zen utiliza una jerarquía de caché de tres niveles, con un caché L3 unificado que se comparte entre todos los núcleos de la CPU.
+                            </li>
+                            <li>
+                                Soporte para memoria DDR4: los procesadores basados en la arquitectura Zen admiten memoria DDR4 de alta velocidad, que proporciona un ancho de banda de memoria mejorado en comparación con la memoria DDR3 utilizada en procesadores anteriores de AMD.
+                            </li>
+                            <li>
+                                Controlador de memoria integrado: la arquitectura Zen incluye un controlador de memoria integrado que proporciona una conexión directa y de baja latencia entre el procesador y la memoria.
+                            </li>
+                            <li>
+                                Simultaneous Multithreading (SMT): AMD llama a su tecnología SMT como Simultaneous Multi-Threading, que permite que cada núcleo de la CPU maneje dos subprocesos al mismo tiempo, mejorando el rendimiento y la eficiencia energética.
+                            </li>
+                            <li>
+                                Precision Boost: La arquitectura Zen de AMD incluye Precision Boost, una tecnología que ajusta automáticamente la velocidad del reloj de la CPU en función de la carga de trabajo.
+                            </li>
+                            <li>
+                                Extended Frequency Range (XFR): La arquitectura Zen también incluye Extended Frequency Range (XFR), que permite que la velocidad del reloj de la CPU aumente automáticamente por encima de la frecuencia base si las condiciones térmicas lo permiten.
+                            </li>
+                        </ol>
+                        </p>
+                        <div class="cpus" align="center">
+                            <img class="cpus" src="../media/imgs/ryzen.webp"><br>
+                            <div class="overlay">
+                                <div class="text"><p align="center" class="footerImage">
+                                    <a href="https://es.wikipedia.org/wiki/Ryzen" target="_blank">Procesador Ryzen</a>
+                                </p></div>
+                            </div>
+                        </div>
+                        <p class="contentBody">
+                            En conjunto, la arquitectura Zen proporciona una mejora significativa en el rendimiento y la eficiencia energética en comparación con los procesadores anteriores de AMD, lo que la convierte en una opción popular para aplicaciones de alto rendimiento y servidores.
+                        </p>
+                        <p class="titleBody" id="listaCpus" align="center"> Lista de procesadores</p>
+                        <table align="center">
+                            <tr>
+                                <th>Procesador</th>
+                                <th>Nucelos</th>
+                                <th>Arquitectura</th>
+                                <th>Frecuencias</th>
+                                <th>Socket</th>
+                                <th>Fecha de lanzamiento</th>
+                            </tr>
+                            <tr>
+                                <td><img class="cpusList" src="../media/imgs/índice.jpg"><br>Ryzen 3</td>
+                                <td>4/8 hilos</td>
+                                <td>Zen</td>
+                                <td>3.6GHz - 3.8GHz</td>
+                                <td>Am4</td>
+                                <td>2017</td>
+                            </tr>
+                            <tr>
+                                <td><img class="cpusList" src="../media/imgs/ryzen5.jpg"><br>Ryzen 5</td>
+                                <td>6/12 hilos</td>
+                                <td>Zen</td>
+                                <td>3.5GHz-4.4Ghz</td>
+                                <td>AM4</td>
+                                <td>2017</td>
+                            </tr>
+                            <tr>
+                                <td><img class="cpusList" src="../media/imgs/small.png"><br>Ryzen 7</td>
+                                <td>8/16 hilos</td>
+                                <td>Zen</td>
+                                <td>3.8GHz-4.7GHz</td>
+                                <td>AM4</td>
+                                <td>2017</td>
+                            </tr>
+                            <tr>
+                                <td><img class="cpusList" src="../media/imgs/ryzen9.png"><br>Ryzen 9</td>
+                                <td>12/24 hilos</td>
+                                <td>Zen</td>
+                                <td>3.7GHz-4.8GHz</td>
+                                <td>AM4</td>
+                                <td>2019</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="page" data-page="2">
                     <div class="indexIntel">
-                        s
+                        <ul class="listIntel">
+                            <li>
+                                Historia intel
+                            </li>
+                            <li>
+
+                            </li>
+                        </ul>
                     </div>
-                    a
+                    <div class="centralBodyIntel">
+
+                    </div>
                 </div>
             </section>
         </main>
