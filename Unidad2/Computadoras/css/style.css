@@ -398,6 +398,7 @@ div.container p.titleBody{
     color: white;
     border-bottom: 3px black solid;
     font-family: 'Fredoka One', cursive;
+    font-size: 2em;
 }
 table.nvidia{
     background: transparent;
