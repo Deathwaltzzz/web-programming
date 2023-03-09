@@ -9,16 +9,16 @@ window.onload = () =>{
             document.querySelector('.tabs .tab.is-active').classList.remove('is-active'); //Cuando se hace click en el nuevo tab se remueve el 'is-active' del tab anterior
             tab_switcher.parentNode.classList.add('is-active'); //Se agrega el 'is-active' al li que clickeemos
             switchPage(page_id)
-            console.log(page_id)
         })
     }
 }
 
 function switchPage (page_id){
     const current_page = document.querySelector('.pages .page.is-active');
-    //if(page_id === 1)
     current_page.classList.remove('is-active');
+    let x = current_page.dataset.data;
 
     const next_page = document.querySelector(`.pages .page[data-page="${page_id}"]`);//Este query selector busca si el data-page es igual al id que seleccionamos
     next_page.classList.add('is-active');
+
 }
