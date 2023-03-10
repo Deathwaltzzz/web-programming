@@ -9,24 +9,31 @@ html{
     scroll-behavior: smooth;
 }
 
+/*Body de la pagina cpus*/
 body.cpus{
     background-image: url("../media/imgs/wallpaper.jpg");
 }
 
+/*Body de la pagina gpus*/
 body.gpus{
     background: white;
+    background: url("../media/imgs/wallpapergpu.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
+/*Div lateral donde viene el indice y logo*/
 div.lateral{
     float: left;
     width: 15vw;
-    height: 50.5em;
+    height: 55rem;
     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
     background-blend-mode: multiply,multiply;
     position: relative;
     border-radius: 10px;
 }
 
+/*Este div contiene lo necesario para hacer el logo de la pagina en el lateral izquierdo*/
 div.logo{
     width: 15vw;
     height: 10vw;
@@ -53,7 +60,9 @@ div.logo img{
     padding-top:0;
     padding-left: 1vw;
 }
-
+/*
+    Parte de lo que sobra del lateral izquierdo donde vendra un indice y el logo hasta mero arriba
+*/
 div.restoLateral{
     width: 100%;
     height: 20vw;
@@ -67,6 +76,11 @@ div.restoLateral ul{
     border-radius: 20px;
     font-size: 1vw;
 }
+
+/*
+Esta parte del css contiene lo mismo que con el header pero en este caso esta en un div lateral donde hago lo mismo para poder cambiar de pagina
+usando javascript, lo use de nuevo ya que estoy usando atributos diferentes por lo q no es redundante :)
+*/
 
 div.restoLateral .tabs{
     list-style-type: none;
@@ -96,14 +110,9 @@ div.restoLateral .tabs .tab a[data-switcher]{
     font-family: 'Secular One', sans-serif;
 }
 
-div.restoLateral .tabs .tab:hover a[data-switcher]{
-/*background: rgb(251,63,135);
-    background: radial-gradient(circle, rgba(251,63,135,1) 0%, rgba(70,124,252,0.4780112728685224) 100%);*/
-}
-
 div.restoLateral .tabs .tab a{
     display: block;
-    padding: 1em 3em;
+    padding: 1vw 3vw;
     text-decoration: none;
     background-color: #DCD9D4;
     background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
@@ -125,16 +134,142 @@ div.restoLateral .tabs .tab.is-active a[data-switcher]{
     font-weight: 700;
 }
 
-
-div.restoDerecha{
-    position: static;
-    margin-left: 10vw;
-    padding: 10vw;
-    width: 80vw;
+/*
+Div del contenedor en la pagina gpu
+*/
+div.container{
+    margin: 1vw 1vw;
+    width: 96%;
     height: 100%;
-    background: red;
+    border-radius: 50px;
+    padding: 1vw 2vw;
+    box-shadow: 10px 3px 6px rgba(60,179,113 ,0.2);
 }
 
+/*Background del contenedor de texto de la paginas gpu apartado nvidia*/
+div.container.nvidia{
+    background: lime;
+}
+
+/*Background del contenedor de texto de la pagina gpu apartado amd*/
+div.container.amd{
+    background: crimson;
+}
+
+/*
+    P del titulo en la pagina gpu's
+*/
+div.container p.titleBody{
+    text-align: center;
+    justify-content: center;
+    color: white;
+    border-bottom: 3px black solid;
+    font-family: 'Fredoka One', cursive;
+    font-size: 2vw;
+    border-radius: 3px;
+}
+/*Div del indice amd*/
+
+div.indexAmd{
+    float:left;
+    height: 100%;
+    width: 20vw;
+    padding-left: 1px;
+    border-radius: 10px;
+    background-image: linear-gradient( 179.4deg,  rgba(132,56,122,1) 14.6%, rgba(190,24,49,1) 104.7% );
+    margin-right: 10px;
+}
+
+/*Div del indice de intel*/
+div.indexIntel{
+    float:left;
+    height: 100%;
+    width: 20vw;
+    padding-left: 1px;
+    border-radius: 10px;
+    background-color: blue;
+    box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
+    margin-right: 10px;
+}
+
+/*Div donde se encuentra todo el contenido de la pagina AMD*/
+div.centralBodyAmd{
+    width: 70%;
+    height: 40vw;
+    background-image: radial-gradient( circle 860px at 11.8% 33.5%,  rgba(240,30,92,1) 0%, rgba(244,49,74,1) 30.5%, rgba(249,75,37,1) 56.1%, rgba(250,88,19,1) 75.6%, rgba(253,102,2,1) 100.2% );
+    margin-left: 22vw;
+    border-radius: 20px;
+    padding-left: 20px;
+    overflow-y: scroll;
+    box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
+    scroll-behavior: smooth;
+}
+
+/*Div donde se encuentra todo el contenido en la pagina intel*/
+div.centralBodyIntel{
+    width: 70%;
+    height: 40vw;
+    background: rgb(174,193,238);
+    background: linear-gradient(130deg, rgba(174,193,238,1) 0%, rgba(255,255,255,0.6320728120349702) 100%);
+    margin-left: 22vw;
+    border-radius: 20px;
+    padding-left: 20px;
+    overflow-y: scroll;
+    box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
+    scroll-behavior: smooth;
+}
+/*Div que se encarga del contenido multimedia en la pagina cpu's*/
+div.cpus{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+/*Se encarga de la transicion de las imagenes con un overlay*/
+div.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10vw;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    border-radius: 30px;
+}
+
+/*Le agrega opacidad cuando aparece el overlay en una imagen*/
+div.cpus:hover div.overlay{
+    opacity: 5;
+}
+
+/*Div encargado del texto que saldera en el overlay de las imagnes en la pagina de cpus*/
+div.text{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/*
+Div con el cuerpo central de la pagina cpu apartado intel
+*/
+div.centralBodyIntel ol{
+    font-size: 1.4vw;
+    color: saddlebrown;
+    margin-bottom: 10px;
+    margin-left: 3vw;
+}
+
+/*
+Este contenido de la pagina es encargada del header, aqui tendre el logo y una lista que se switcheara con los atributos
+data-switch de html y scripts de JS.
+Tambien se le dara formato a la lista con el nombre de la clase tab
+*/
 header{
     background: rgb(174,193,238);
     background: linear-gradient(130deg, rgba(174,193,238,1) 0%, rgba(246,20,20,0.7301120277212447) 100%);
@@ -198,57 +333,12 @@ header nav .tabs .tab.is-active a[data-switcher]{
     font-weight: 700;
 }
 
+/*P para los titulos*/
 p.titulosCpu{
     font-size: 20px;
     font-weight: 600;
     font-family: 'Fredoka One', cursive;
-}
-div.indexAmd{
-    float:left;
-    height: 100%;
-    width: 20vw;
-    padding-left: 1px;
-    border-radius: 10px;
-    background-image: linear-gradient( 179.4deg,  rgba(132,56,122,1) 14.6%, rgba(190,24,49,1) 104.7% );
-    margin-right: 10px;
-}
-
-div.indexIntel{
-    float:left;
-    height: 100%;
-    width: 20vw;
-    padding-left: 1px;
-    border-radius: 10px;
-    background-color: blue;
-    box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
-    margin-right: 10px;
-}
-
-div.centralBodyAmd{
-    width: 70%;
-    height: 40vw;
-    background-image: radial-gradient( circle 860px at 11.8% 33.5%,  rgba(240,30,92,1) 0%, rgba(244,49,74,1) 30.5%, rgba(249,75,37,1) 56.1%, rgba(250,88,19,1) 75.6%, rgba(253,102,2,1) 100.2% );
-    margin-left: 22vw;
-    border-radius: 20px;
-    padding-left: 20px;
-    overflow-y: scroll;
-    box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
-    scroll-behavior: smooth;
-}
-
-div.centralBodyIntel{
-    width: 70%;
-    height: 40vw;
-    background: rgb(174,193,238);
-    background: linear-gradient(130deg, rgba(174,193,238,1) 0%, rgba(255,255,255,0.6320728120349702) 100%);
-    margin-left: 22vw;
-    border-radius: 20px;
-    padding-left: 20px;
-    overflow-y: scroll;
-    box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
-    scroll-behavior: smooth;
-}
-
+}/*P para el contenio en el cuerpo*/
 p.contentBody{
     padding-top:10px;
     font-size: 1.8vw;
@@ -259,18 +349,22 @@ p.contentBody{
     margin-right: 20px;
 }
 
+/*P para el footer en una imagen*/
 p.footerImage{
     font-size: 2vw;
     padding-bottom: 2px;
     color:crimson;
 }
 
+/*P para titulos en el cuerpo*/
 p.titleBody{
     padding-top:10px;
     margin: 0 auto;
     font-size: 3vw;
 }
-
+/*Esta seccion tiene etiquetas UL para administrar colores, bordes, padding etc...
+Para las listas amd e intel
+*/
 ul.listAmd{
     font-size: 1.5vw;
     color:antiquewhite;
@@ -314,6 +408,8 @@ ol li{
     margin-bottom: 5px;
     margin-left: 1vw;
 }
+
+/*Este codigo tiene las propiedades para las imagenes del cuerpo cpu y gpu*/
 img.logo{
     height: 50px;
     width: 50px;
@@ -329,6 +425,10 @@ img.cpus{
     width: auto;
     display: block;
 }
+
+/*Esta seccion de codigo del main y pages se encarga de usar un section y divs para poder acoplar a mi gusto el contenido de mi pagina
+    Use %, em,rem y vw,hw para tratar de hacerla mas responsiva
+*/
 main{
     padding-left: 0px;
     padding-right: 0px;
@@ -338,13 +438,12 @@ main{
 
 .pages{
     margin-top:0px;
-    padding-left: 4rem;
-    padding-top: 3rem;
+    padding: 4vw 2vw;
     background: rgb(174,193,238);
     background: linear-gradient(130deg, rgba(174,193,238,1) 0%, rgba(255,255,255,0.6320728120349702) 100%);
     box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
     border-radius: 10px;
-    height: 51rem;
+    height: 60em;
     width: 100%;
 }
 
@@ -356,59 +455,31 @@ main{
     display: block;
 }
 
-.pages .page.is-active.nvidia{
+.pages .page.is-active.gpu{
     display: block;
     margin-top:0px;
     margin-left: 20vw;
+    margin-right: 20vw;
     padding: 2vw 1vw;
-    background: black;
+    background: rgba(0,0,0,0.7);
     box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
     border-radius: 50px;
-    height: 43em;
-    width: 60em;
+    height: 100%;
+    width: 66%;
+    overflow: hidden;
 }
+/*
+ Todo este segmento de table y th,td,tr etc... se usara para poder modificar las tablas de contenido en la pagina nvidia
 
-.pages .page.is-active.amd{
-    display: block;
-    margin-top:0px;
-    margin-left: 20vw;
-    padding: 4vw 2vw;
-    background: black;
-    box-shadow: 10px 3px 6px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    height: 43em;
-    width: 60em;
-}
-
-div.container{
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    margin-bottom: 0.5rem;
-    width: 57em;
-    height: 40em;
-    border-radius: 50px;
-    padding: 1vw 3vw;
-}
-
-div.container.nvidia{
-    background: lime;
-}
-
-div.container p.titleBody{
-    text-align: center;
-    justify-content: center;
-    color: white;
-    border-bottom: 3px black solid;
-    font-family: 'Fredoka One', cursive;
-    font-size: 2em;
-}
-table.nvidia{
+*/
+table.gpus{
     background: transparent;
     margin-top: 10px;
     padding: 0;
     border-spacing: 0;
 
 }
+
 
 th.separator{
     border-bottom: 2px black solid;
@@ -417,34 +488,55 @@ th.separator{
     padding-right: 5vw;
     padding-bottom: 1vw;
     color:white;
-    font-size: 1.5em;
+    font-size: 1.5vw;
 }
 
 th.header{
     margin: 0;
-    padding-left: .7em;
-    padding-right: 1.5em;
+    padding-left: .8em;
+    padding-right: 1.8em;
     border-bottom: 2px black solid;
     padding-bottom: 1vw;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     color:white;
     overflow: hidden;
 }
 
-table.nvidia tr td{
+table.gpus tr td{
     color: black;
-    font-size: 1em;
+    font-size: 1vw;
     border-bottom: 2px black solid;
     border-right: 2px black solid;
     padding: 0.5em;
 }
 
-table.nvidia tr td.title{
+table.gpus tr td.content{
+    color: black;
+    font-size: 1vw;
+    border-bottom: 2px black solid;
+    border-right: 0;
+    padding: 0.5em;
+}
+
+table.gpus tr td.title.nvidia{
     border-bottom: 2px black solid;
     border-right: 0;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.5vw;
+    background: green;
 }
+
+table.gpus tr td.title.amds{
+    border-bottom: 2px black solid;
+    border-right: 0;
+    color: white;
+    font-size: 1.5vw;
+    background: darkred;
+}
+
+/*
+    Apartir de este codigo es el que esta encargado de las tablas en amd en la pagina de cpus
+*/
 
 table.amd{
     text-align: center;
@@ -474,64 +566,19 @@ td.amd{
     padding-top:10px;
 }
 
+/*Etiqueta img para la lista en la pagina de amd*/
 img.cpusList{
     height: 50px;
     width: auto;
     border-radius: 10px;
 }
-
-div.cpus{
-    position: relative;
-    width: 50%;
-    margin: 0 auto;
-}
-
-div.overlay{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 10vw;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-    border-radius: 30px;
-}
-
-div.cpus:hover div.overlay{
-    opacity: 5;
-}
-
-div.text{
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
+/*Use esta etiqueta para poder tener un footer debajo de cada pagina*/
 p.footerImage a{
     color: crimson;
 }
 
+/*Esta lista simplemente contiene el color blanco para cambiarlo en default, ya que combina mas con mis colores por defecto*/
 li a{
     color:antiquewhite;
 }
 
-div.centralBodyIntel ol{
-    font-size: 1.4vw;
-    color: saddlebrown;
-    margin-bottom: 10px;
-    margin-left: 3vw;
-}
-
-div.footer{
-    height: 10vw;
-    bottom: 80%;
-    width: 100%;
-    background: #fbc2eb;
-}

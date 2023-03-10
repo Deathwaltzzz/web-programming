@@ -1,4 +1,4 @@
-window.onload = () =>{
+ window.onload = () =>{
     const tab_switchers = document.querySelectorAll('[data-switcher]'); //Esta constante hace uso del querySelectorAll en el data-switcher para obtener todos los elementos que tengan este atributo
 
     for(let i=0; i< tab_switchers.length ; i++){

@@ -11,7 +11,9 @@
 
     </head>
     <body class="gpus">
-        <script src="../JS/gpus.js"></script>
+        <script src="../JS/main.js"></script>
+        <!--Etiquetas donde se organiza el contenido lateral de la pagina
+            Aqui hay listas que contienen el indice y un logo-->
         <div class="lateral">
             <div class="logo">
                 <p>GPU's <br> <img src="../media/imgs/gpu.png" align="center"></p>
@@ -30,14 +32,15 @@
                 </ul>
             </div>
         </div>
+        <!--Contenido principal de la pagina donde se encuentra mas que nada la informacion-->
         <main>
             <section class="pages">
-                <div class="page is-active nvidia" data-page="1">
+                <div class="page is-active gpu" data-page="1">
                     <div class="container nvidia">
                         <p class="titleBody">
                             Tarjetas graficas de nvidia
                         </p>
-                        <table class="nvidia">
+                        <table class="gpus">
                             <tr class="header">
                                 <th class="separator">GPU</th>
                                 <th class="header">Tecnologia</th>
@@ -47,16 +50,46 @@
                                 <th class="header">Series</th>
                             </tr>
                             <tr>
-                                <td class="title">
+                                <td class="title nvidia">
                                     FAMILIA
                                 </td>
-                                <td class="title">
+                                <td class="title nvidia">
                                    RTX
                                 </td>
-                                <td class="title"></td>
-                                <td class="title"></td>
-                                <td class="title"></td>
-                                <td class="title"></td>
+                                <td class="title nvidia"></td>
+                                <td class="title nvidia"></td>
+                                <td class="title nvidia"></td>
+                                <td class="title nvidia"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    RTX 2060
+                                </td>
+                                <td class="content">
+                                    Turing
+                                </td>
+                                <td class="content">
+                                    Media-baja
+                                </td>
+                                <td class="content">
+                                    Gaming
+                                </td>
+                                <td class="content">
+                                    Si
+                                </td>
+                                <td class="content">
+                                    RTX
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    RTX 2070
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    RTX 2080
+                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -78,11 +111,151 @@
                                 RTX 3090
                                 </td>
                             </tr>
+                            <tr>
+                                <td class="title nvidia">
+                                    FAMILIA
+                                </td>
+                                <td class="title nvidia">
+                                    GTX
+                                </td>
+                                <td class="title nvidia"></td>
+                                <td class="title nvidia"></td>
+                                <td class="title nvidia"></td>
+                                <td class="title nvidia"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    GTX 1050
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    GTX 1060
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                GTX 1070
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    GTX 1080
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title nvidia">
+                                    FAMILIA
+                                </td>
+                                <td class="title nvidia">
+                                    GT
+                                </td>
+                                <td class="title nvidia"></td>
+                                <td class="title nvidia"></td>
+                                <td class="title nvidia"></td>
+                                <td class="title nvidia"></td>
+                            </tr>
                         </table>
                     </div>
                 </div>
-                <div class="page amd" data-page="2">
+                <div class="page gpu" data-page="2">
+                    <div class="container amd">
+                        <p class="titleBody" align="center">
+                            Tarjetas graficas AMD
+                        </p>
+                        <table class="gpus">
+                            <tr class="header">
+                                <th class="separator">GPU</th>
+                                <th class="header">Tecnologia</th>
+                                <th class="header">Gama</th>
+                                <th class="header">Uso</th>
+                                <th class="header">Gaming</th>
+                                <th class="header">Series</th>
+                            </tr>
+                            <tr>
+                                <td class="title amds">
+                                    FAMILIA
+                                </td>
+                                <td class="title amds">
+                                    RADEON RX
+                                </td>
+                                <td class="title amds"></td>
+                                <td class="title amds"></td>
+                                <td class="title amds"></td>
+                                <td class="title amds"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    RX 6500
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    RX 6600
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    RX 6700
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    RX 6800
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    RX 6900
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title amds">
+                                    FAMILIA
+                                </td>
+                                <td class="title amds">
+                                    VEGA
+                                </td>
+                                <td class="title amds"></td>
+                                <td class="title amds"></td>
+                                <td class="title amds"></td>
+                                <td class="title amds"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    VEGA 56
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    VEGA 64
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    VEGA 8
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    VEGA 11
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title amds">
+                                    FAMILIA
+                                </td>
+                                <td class="title amds">
+                                    R9
+                                </td>
+                                <td class="title amds"></td>
+                                <td class="title amds"></td>
+                                <td class="title amds"></td>
+                                <td class="title amds"></td>
+                            </tr>
+                        </table>
 
+                    </div>
                 </div>
             </section>
         </main>
