@@ -1,84 +1,159 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+/*Cuerpo de la pagina*/
+body {
     font-family: sans-serif;
     margin: 0;
     overflow-x: hidden;
-    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+    background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 1) 7.1%, rgba(240, 246, 238, 1) 67.4%);
 }
-
-header{
+/*Header de la pagina*/
+header {
     min-height: 80px;
-    display:flex;
+    display: flex;
     align-items: center;
     min-width: 100vw;
     justify-content: space-between;
     background: antiquewhite;
-    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
 
 }
 
-header p{
+header p {
     font-size: 30px;
 }
+/*
+Utilizacion de etiqueta nav para facilitar el seccionamiento de la pagina
+Tambien aqui se configura las propiedades del menu de navegacion
+*/
+nav.menu {
+    display: flex;
+}
 
-.logo{
-    display:flex;
+nav.menu ul.index {
+    list-style-type: none;
+    display: flex;
+    margin-right: 25px;
+}
+
+nav.menu ul li.tab {
+    padding-right: 10px;
+}
+
+nav.menu ul.index li.tab a[data-switcher] {
+    color: black;
+    text-decoration: none;
+    padding: 0px 10px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+nav.menu ul.index li.tab a[data-switcher]:hover {
+    color: red;
+}
+
+nav.menu ul li.tab:hover {
+    color: red;
+    cursor: pointer;
+}
+
+nav.menu ul.index li.tab.is-active {
+    color: red;
+    text-decoration: none;
+    padding: 0px 10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+nav.menu ul.index li.tab.is-active a[data-switcher] {
+    color: red;
+    text-decoration: none;
+    padding: 0px 10px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.logo {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo img{
+
+.logo img {
     height: 50px;
-    margin:10px;
+    margin: 10px;
 }
 
-
-div.index{
+/*Aqui termina el estilo del header*/
+/*
+Este indice es el que se utilizara en la pagina AMD
+*/
+div.index {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 15vw;
     height: 100vh;
     background: #BDBBBE;
-    top:80%;
+    top: 80%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-div.index ul{
+div.index ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-div.index ul li{
+div.index ul li {
 
 }
 
-a img.arrow{
+/*Aqui termina el index de AMD*/
+
+a img.arrow {
     padding: 0;
     margin: 0;
     position: fixed;
     float: left;
 }
 
-a.arrow{
-    padding:0;
+a.arrow {
+    padding: 0;
 }
 
-.page{
+img.arrow {
+    position: fixed;
+    margin-left: 0;
+    content: url("../media/images/arrow.png");
+    width: 2vw;
+    float: left;
+    padding: 0;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+/*classes .page para seccionar la pagina y poder demostrar su contenido
+Cuando esten activas
+*/
+.page {
     display: none;
 }
 
-.page.is-active{
+.page.is-active {
     display: block;
 }
+/*Aqui termina el .page*/
 
-div.innerIndex{
+/*Indice interior de la pagina inicio*/
+div.innerIndex {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,33 +163,15 @@ div.innerIndex{
     background: beige;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.75) inset;
-    -webkit-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.75) inset;
-    -moz-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.75) inset;
+    box-shadow: 0px 12px 5px 0px rgba(0, 0, 0, 0.75) inset;
+    -webkit-box-shadow: 0px 12px 5px 0px rgba(0, 0, 0, 0.75) inset;
+    -moz-box-shadow: 0px 12px 5px 0px rgba(0, 0, 0, 0.75) inset;
 }
-
-img.arrow{
-    position: fixed;
-    margin-left: 0;
-    content: url("../media/images/arrow.png");
-    width: 2vw;
-    float: left;
-    padding: 0;
-}
-
-.arrow:hover{
-    cursor: pointer;
-}
-
-h2{
-    font-family: 'Kanit', sans-serif;
-}
-
-h2 ul li:hover{
+h2 ul li:hover {
     font-size: 30px;
 }
 
-.innerIndex ul{
+.innerIndex ul {
     list-style-type: none;
     display: flex;
     border-bottom: 1px solid black;
@@ -122,18 +179,25 @@ h2 ul li:hover{
     border-radius: 6px;
 }
 
-.innerIndex ul li{
+.innerIndex ul li {
     padding-right: 1vw;
 }
+/*Aqui termina el contenido del inner index*/
 
-.contentHistoria{
+
+h2 {
+    font-family: 'Kanit', sans-serif;
+}
+
+
+.contentHistoria {
     padding: 1vw 2vh;
     border: 1px solid black;
     border-radius: 30px;
     margin: 2vh 2vw;
 }
 
-.contentOrigenes{
+.contentOrigenes {
     padding: 1vw 2vh;
     border: 1px solid black;
     border-bottom: 0;
@@ -141,47 +205,47 @@ h2 ul li:hover{
     margin: 2vh 2vw 0;
 }
 
-.contentRisc{
+.contentRisc {
     display: flex;
     margin-left: 0vw;
     margin-right: 0vw;
     padding: 1vw 2vh;
     justify-content: space-between;
     word-break: break-word;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 
 }
-
-.noBorder{
-    box-shadow: 0px 0px 0px 0px #000000, 0px 0px 0px 0px rgba(0,0,0,0);
-    -webkit-box-shadow: 0px 0px 0px 0px #000000, 0px 0px 0px 0px rgba(0,0,0,0);
+/*Determina si un div de contenido tendra un borde o no*/
+.noBorder {
+    box-shadow: 0 0px 0px 0px #000000, 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0px 0 0px 0 #000000, 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
-
-.border{
+/*Lo contrario al de arriba*/
+.border {
     word-break: break-word;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
-
-.mid{
+/*Div para poder desplegar contenido de forma natural o block*/
+.mid {
     align-items: center;
     text-justify: auto;
     display: inline-block;
 }
-
-.rad{
+/*Agrega curvatura a un div que no tenga, de abajo*/
+.rad {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-
-.final{
+/*Agrega un borde al final de un div*/
+.final {
     border-bottom: 1px solid black;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     margin-bottom: 2vh;
 }
-
-.contentMarcas{
+/*Div que tiene el conteindo de la seccion marcas*/
+.contentMarcas {
     border: 1px solid black;
     border-radius: 20px;
     margin-left: 2vw;
@@ -189,10 +253,10 @@ h2 ul li:hover{
     background: white;
     margin-bottom: 2vh;
 }
-
-.marcas div.intel{
-    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.39);
-    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.39);
+/*Mera estetica de la pagina*/
+.marcas div.intel {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.39);
     height: fit-content;
     border-radius: 20px;
     margin-left: 1vw;
@@ -203,21 +267,21 @@ h2 ul li:hover{
     padding-bottom: 2vh;
 }
 
-h2.intel{
+h2.intel {
     color: white;
     text-align: center;
     font-size: 40px;
     margin-bottom: 1vh;
 }
 
-p.intel{
+p.intel {
     color: white;
     padding-bottom: 5vh;
 }
 
-.marcas div.amd{
-    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.39);
-    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.39);
+.marcas div.amd {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.39);
     height: fit-content;
     border-radius: 20px;
     margin-left: 1vw;
@@ -228,17 +292,17 @@ p.intel{
     margin-bottom: 3vh;
 }
 
-h2.amd{
+h2.amd {
     text-align: center;
     font-size: 40px;
     margin-bottom: 1vh;
 }
 
-p.amd{
+p.amd {
     padding-bottom: 5vh;
 }
-
-div.images{
+/*En este div se encuentra el conteido para imagenes con hover*/
+div.images {
     position: relative;
     text-align: center;
     align-items: center;
@@ -246,7 +310,7 @@ div.images{
     margin: auto;
 }
 
-img.main{
+img.main {
     opacity: 1;
     display: block;
     height: auto;
@@ -258,42 +322,42 @@ img.main{
     max-height: 300px;
 }
 
-.overlay{
+.overlay {
     transition: .5s ease;
     opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%)
 }
 
 
-.images:hover .main{
+.images:hover .main {
     opacity: 0.3;
 }
 
-.images:hover .overlay{
+.images:hover .overlay {
     opacity: 1;
 }
-
-.origins{
+/*Aqui termina el div de imagenes*/
+.origins {
     display: none;
 }
-
-p{
-    margin:2vw;
+/*Mero estilo de etiquetas de texto*/
+p {
+    margin: 2vw;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
 }
 
-h1{
+h1 {
     text-align: center;
     font-family: 'Kanit', sans-serif;
     font-size: 30px;
 }
 
-h3{
+h3 {
     font-size: 21px;
     margin-top: 2vh;
     padding-top: 2vh;
@@ -301,12 +365,12 @@ h3{
     font-family: 'Kanit', sans-serif;
 }
 
-.mid h3{
-    padding:0;
+.mid h3 {
+    padding: 0;
     margin: 0
 }
 
-a{
+a {
     color: black;
     text-decoration: none;
     padding: 0px 10px;
@@ -314,92 +378,51 @@ a{
     font-weight: 300;
 }
 
-nav.menu{
-    display:flex;
-}
 
-nav.menu ul.index{
-    list-style-type: none;
-    display: flex;
-    margin-right:25px;
-}
-
-nav.menu ul li.tab{
-    padding-right: 10px;
-}
-
-nav.menu ul.index li.tab a[data-switcher]{
-    color: black;
-    text-decoration: none;
-    padding: 0px 10px;
-    font-size: 25px;
-    font-weight: 300;
-}
-
-nav.menu ul.index li.tab a[data-switcher]:hover{
-    color: red;
-}
-
-nav.menu ul li.tab:hover{
-    color: red;
-    cursor: pointer;
-}
-
-nav.menu ul.index li.tab.is-active{
-    color: red;
-    text-decoration: none;
-    padding: 0px 10px;
-    font-size: 25px;
-    font-weight: 600;
-}
-
-nav.menu ul.index li.tab.is-active a[data-switcher]{
-    color: red;
-    text-decoration: none;
-    padding: 0px 10px;
-    font-size: 25px;
-    font-weight: 300;
-}
-
-@media (max-width: 600px){
-    header{
+/*Este apartado agrega mas responsividad a la pagina usando meqdia
+querys*/
+@media (max-width: 600px) {
+    header {
         flex-direction: column;
     }
 
-    nav{
+    nav {
         padding: 10px 0px;
     }
 
-    div.index{
+    div.index {
         width: 30vw;
     }
 
-    h2{
+    h2 {
         font-size: 4vw;
     }
 
-    h2 ul li:hover{
-        font-size:5vw ;
+    h2 ul li:hover {
+        font-size: 5vw;
     }
 
-    .contentOrigenesImg{
+    .contentOrigenesImg {
         flex-direction: column;
     }
-    .contentOrigenesImg img{
+
+    .contentOrigenesImg img {
         height: 20vh;
         width: 50%;
         margin: auto;
         padding-top: 2vh;
         padding-bottom: 2vh;
     }
-    img.main{
+
+    img.main {
         max-width: 100%;
     }
-    .contentRisc{
+
+    .contentRisc {
         flex-direction: column;
     }
 
-    .arrow{
+    .arrow {
         height: 5vh;
     }
 }
