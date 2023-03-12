@@ -24,10 +24,10 @@ Autor: Leonardo Contreras Martinez.
     </a>
     <nav class="menu">
         <ul class="index">
-            <li class="tab is-active">
+            <li class="tab">
                 <a data-switcher data-tab="1">Inicio</a>
             </li>
-            <li class="tab" >
+            <li class="tab is-active" >
                 <a data-switcher data-tab="2">Amd</a>
             </li>
             <li class="tab"><a data-switcher data-tab="3">Intel</a></li>
@@ -36,7 +36,7 @@ Autor: Leonardo Contreras Martinez.
     </nav>
 </header>
 <main class="pages">
-    <div class="page is-active" data-page="1">
+    <div class="page" data-page="1">
         <div class="innerIndex">
             <h2><ul>
                 <li><a href="#historia">Historia</a></li>
@@ -186,23 +186,112 @@ Autor: Leonardo Contreras Martinez.
             </div>
         </section>
     </div>
-    <div class="page" data-page="2">
-        <div class="index">
-            <ul>
-                <li>
-                    historia
-                </li>
-                <li>
-
-                </li>
-            </ul>
-        </div>
-        <div class="content">
-        </div>
+    <div class="page is-active" data-page="2">
+        <section class="amd">
+            <div class="index">
+                <ul>
+                    <li><a href="#og">Arquitectura Original</a></li>
+                    <li><a href="#nox86amd">Arquitectura no x86</a></li>
+                    <li><a href="#x86amd">Arquitectura x86</a></li>
+                </ul>
+            </div>
+            <div class="header one">
+                <h1 id="og">Arquitectura original AMD</h1>
+            </div>
+            <div class="content">
+                <p>
+                    La arquitectura original de AMD se remonta a finales de la década de 1970 y principios de la década de 1980, cuando AMD comenzó a fabricar microprocesadores compatibles con la arquitectura x86 de Intel. En la década de 1990, AMD desarrolló su propia arquitectura RISC (Reduced Instruction Set Computing) llamada AMD 29000 o 29k.
+                    La arquitectura 29k de AMD fue diseñada para ser utilizada en aplicaciones de alta velocidad y de baja potencia, como la electrónica de consumo, sistemas embebidos y de comunicaciones. <br>
+                    La arquitectura 29k fue basada en una arquitectura RISC, lo que significa que los procesadores estaban diseñados para ejecutar un conjunto limitado de instrucciones, lo que permitió una mayor velocidad de procesamiento y menor consumo de energía.
+                </p>
+                <div class="images">
+                    <img src="../media/images/amd2900.png" alt="" class="main">
+                    <div class="overlay">
+                        <p>Procesador AMD 2900</p>
+                    </div>
+                </div>
+                <p>
+                    La arquitectura 29k utilizaba una estructura de registro de 32 bits y soportaba tanto operaciones de punto flotante como de enteros. Además, la arquitectura 29k presentaba características avanzadas de predicción de saltos y un sistema de caché integrado para mejorar la eficiencia de la memoria. El procesador también presentaba un bus de datos de 64 bits, lo que permitía la transferencia de datos más rápidas entre el procesador y otros dispositivos.<br>
+                    Uno de los aspectos más interesantes de la arquitectura 29k era su capacidad de multitarea. La arquitectura permitía la ejecución de varias tareas simultáneamente, lo que permitía una mayor eficiencia en el procesamiento de datos en aplicaciones de alta demanda.<br>
+                    AMD también desarrolló varias variantes de la arquitectura 29k, incluyendo el AMD 29030, un procesador de alto rendimiento que presentaba una velocidad de reloj de hasta 33 MHz y una capacidad de procesamiento de hasta 66 MIPS (Millones de Instrucciones por Segundo).
+                </p>
+                <div class="images">
+                    <img src="../media/images/800px-KL_AMD_Am29030.jpg" alt="" class="main">
+                    <div class="overlay">
+                        <p>Procesador AMD 29030.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header two">
+                <h1 id="nox86amd">Arquitectura no x-86</h1>
+            </div>
+            <div class="content">
+                <p>
+                    AMD ha desarrollado varias arquitecturas de procesadores que no son compatibles con la arquitectura x86 de Intel. Aquí se describirán brevemente algunas de estas arquitecturas:
+                </p>
+                <dl>
+                    <dt>AMD64</dt>
+                        <dd>
+                            Arquitectura AMD64 o x86-64: también conocida como la arquitectura de 64 bits de AMD, esta arquitectura fue desarrollada por AMD como una extensión de la arquitectura x86 de Intel. AMD64 es compatible con la mayoría de las aplicaciones y sistemas operativos diseñados para la arquitectura x86, pero permite el uso de sistemas y aplicaciones de 64 bits que requieren mayor capacidad de procesamiento y memoria. La arquitectura AMD64 fue introducida por primera vez en los procesadores Opteron de AMD en 2003 y desde entonces ha sido adoptada por otros fabricantes de procesadores.
+                        </dd>
+                    <dt>ARM</dt>
+                        <dd>
+                            AMD ha incursionado en la arquitectura ARM, que es una arquitectura de procesadores RISC ampliamente utilizada en dispositivos móviles, sistemas embebidos y otros dispositivos de baja potencia. En 2014, AMD adquirió la compañía SeaMicro, que se especializaba en servidores de bajo consumo energético basados en la arquitectura ARM. Desde entonces, AMD ha desarrollado varios procesadores basados en la arquitectura ARM, incluyendo el procesador Opteron A1100, que está diseñado para servidores y sistemas de almacenamiento de datos.
+                        </dd>
+                    <dt>Radeon</dt>
+                        <dd>
+                            Aunque no es una arquitectura de procesadores en sí misma, la arquitectura Radeon es el nombre dado a la arquitectura de procesamiento de gráficos desarrollada por AMD para sus tarjetas gráficas. La arquitectura Radeon se centra en el procesamiento paralelo y la eficiencia energética, y ha sido utilizada en una amplia variedad de aplicaciones, desde juegos hasta aplicaciones científicas y de ingeniería.
+                        </dd>
+                </dl>
+            </div>
+            <div class="header three">
+                <h1 id="x86amd">Arquitectura x86</h1>
+            </div>
+            <div class="content">
+                <p>
+                    La arquitectura x86 de AMD es una extensión de la arquitectura x86 original de Intel, utilizada en una amplia variedad de aplicaciones, desde computadoras de escritorio hasta servidores y sistemas embebidos. AMD comenzó a fabricar microprocesadores compatibles con la arquitectura x86 de Intel en la década de 1980, y en 1999 lanzó su primer procesador Athlon basado en la arquitectura x86.
+                </p>
+                <div class="images">
+                    <img src="../media/images/athlon.jpg" alt="" class="main">
+                    <div class="overlay">
+                        <p>Procesador AMD athlon.</p>
+                    </div>
+                </div>
+                <p>
+                    La arquitectura x86 de AMD cuenta con un conjunto de instrucciones complejas que permiten la ejecución de múltiples tareas en una sola instrucción. Además, ofrece una amplia gama de instrucciones para el procesamiento de datos, incluyendo operaciones aritméticas, lógicas y de comparación, y utiliza una estructura de registro de 32 bits que soporta tanto operaciones de punto flotante como de enteros.<br>
+                    La arquitectura x86 de AMD también presenta características avanzadas de predicción de saltos y un sistema de caché integrado para mejorar la eficiencia de la memoria. El procesador cuenta con un bus de datos de 64 bits, lo que permite la transferencia de datos más rápidas entre el procesador y otros dispositivos.
+                </p>
+                <div class="images">
+                    <img src="../media/images/x86amd.png" alt="" class="main">
+                    <div class="overlay">
+                        <p>Estructura de un procesador AMD multinucleo de x86.</p>
+                    </div>
+                </div>
+                <p>
+                    AMD ha desarrollado varias variantes de la arquitectura x86, incluyendo el AMD64 o x86-64, que es una extensión de 64 bits de la arquitectura x86. AMD64 es compatible con la mayoría de las aplicaciones y sistemas operativos diseñados para la arquitectura x86 de Intel, pero permite el uso de sistemas y aplicaciones de 64 bits que requieren mayor capacidad de procesamiento y memoria.
+                </p>
+                <div class="images">
+                    <img src="../media/images/AMD_Athlon_64FX.jpg" alt="" class="main">
+                    <div class="overlay">
+                        <p>Procesador de la arquitectura AMD64</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <div class="page" data-page="3">
+        <section class="intel">
 
+        </section>
     </div>
 </main>
+
+<footer>
+    <div class="footer">
+        <a href="https://github.com/NexWan" target="_blank"><img src="../media/images/gitw.png" alt="" class="redes"></a>
+        <a href="https://twitter.com/Macawwwwwww" target="_blank"><img src="../media/images/Twitter-logo.svg.png" alt="" class="redes"></a>
+        <a href="https://open.spotify.com/user/31yzahwadeqrj7t3znaogbz63vjm" target="_blank"><img src="../media/images/768px-Spotify.png" alt="" class="redes"></a>
+    </div>
+</footer>
 </body>
 </html>

@@ -90,32 +90,8 @@ nav.menu ul.index li.tab.is-active a[data-switcher] {
 
 /*Aqui termina el estilo del header*/
 /*
-Este indice es el que se utilizara en la pagina AMD
-*/
-div.index {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15vw;
-    height: 100vh;
-    background: #BDBBBE;
-    top: 80%;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
 
-div.index ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-div.index ul li {
-
-}
-
-/*Aqui termina el index de AMD*/
-
+/*Imagen de una flecha que manda al inicio de la pagina*/
 a img.arrow {
     padding: 0;
     margin: 0;
@@ -139,6 +115,7 @@ img.arrow {
 .arrow:hover {
     cursor: pointer;
 }
+/*Aqui termina esa imagen de flecha*/
 
 /*classes .page para seccionar la pagina y poder demostrar su contenido
 Cuando esten activas
@@ -329,7 +306,13 @@ img.main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%);
+    word-break: break-word;
+}
+
+.overlay p{
+    word-break: break-word;
+    margin: 0;
 }
 
 
@@ -378,9 +361,146 @@ a {
     font-weight: 300;
 }
 
+/*Aqui comienza el dise;o del apartado 'AMD'*/
 
+/*Este indice es el que se utilizara en la pagina AMD*/
+
+.amd div.index{
+    width: 100%;
+    height: 20vh;
+    background: black;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+.index ul{
+    display: flex;
+    list-style-type: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 3vw 3vh;
+}
+
+.index li{
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+}
+
+.index ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding-right: 1vw;
+    text-decoration: none;
+}
+
+.index ul li a:hover{
+    font-size: 30px;
+}
+
+.amd div.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    /*background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(247,87,0,0.5) 0%, rgba(249,0,0,0.5) 90.1% );*/
+    margin: auto;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, inset 0px 5px 15px 0px rgba(0,0,0,0);
+    box-shadow: 0px 10px 13px -7px #000000, inset 0px 5px 15px 0px rgba(0,0,0,0);
+}
+
+.one{
+    background-image: url("../media/images/redwallpaper2.png");
+    background-attachment: fixed;
+    background-size: 100%;
+    filter: blur();
+}
+
+.two{
+    background-image: url("../media/images/redwallpaper1.png");
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+.three{
+    background-image: url("../media/images/redwallpaper3.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+dl{
+    margin-left: 2vw;
+    word-break: break-word;
+}
+
+dt{
+    font-family: 'Kanit', sans-serif;
+    font-size: 25px;
+}
+
+dd{
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-right: 5vw;
+}
+
+.header h1{
+    color: white;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.amd .content{
+    margin-top: 1vh;
+    background: white;
+    width: 100%;
+    padding: 1vw 1vh;
+}
+
+/*Aqui termina el dise;o de AMD*/
+
+/*Aqui comienza el dise;o de INTEL*/
+
+.header .intel{
+
+}
+
+/*Aqui termina el dise;o de Intel*/
+
+/*Footer*/
+
+div.footer{
+    width: 100%;
+    height: 60px;
+    background: black;
+    text-align: center;
+    align-items: center;
+    bottom: 100%;
+    margin-bottom: 0;
+    padding: 2vw 2vh;
+}
+.redes{
+    margin-bottom: 0;
+    width: auto;
+    height: 50px;
+}
+
+.footer a{
+    margin: auto;
+    padding-left: 2vw;
+}
+/*Fin footer*/
+/*Aqui termina el contenido de la pagina cpu*/
 /*Este apartado agrega mas responsividad a la pagina usando meqdia
 querys*/
+
 @media (max-width: 600px) {
     header {
         flex-direction: column;
@@ -424,5 +544,24 @@ querys*/
 
     .arrow {
         height: 5vh;
+    }
+
+    .amd div.index li a{
+        font-size: 4vw;
+        padding-bottom: 2vh;
+        margin: auto;
+        padding-top: 0;
+    }
+
+    .amd div.index ul li a:hover{
+        font-size: 5vw;
+    }
+
+    .one,.two,.three{
+        background-attachment: local;
+    }
+
+    .three{
+        background-size: 100%;
     }
 }
