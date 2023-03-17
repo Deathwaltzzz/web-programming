@@ -44,4 +44,11 @@ function get8th(){
 function get9th(){
     document.getElementById("but7").style.display = "none"
     document.getElementById("ninth").innerHTML = "Hay que ir amigou, para ir juntando lana desde ahorita"
+    document.getElementById("10th").style.display = "flex"
+
+}
+
+function get10th(){
+    document.getElementById("but8").style.display = "none"
+    document.getElementById("tenth").style.display = "block"
 }

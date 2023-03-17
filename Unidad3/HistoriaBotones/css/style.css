@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+/*Div encargado de tener el header, en este caso imitar el estilo de un contacto de wsp*/
 div.header{
     height: 20vh;
     background: darkslategray;
@@ -11,6 +12,7 @@ div.header{
     padding-left: 1vw;
 }
 
+/*Letra para el header*/
 .infoH p{
     color: white;
     font-family: 'Ubuntu', sans-serif;
@@ -18,7 +20,7 @@ div.header{
     padding-left: 2vw;
     font-size: 30px;
 }
-
+/*Propiedades para que se vea de buena forma la info*/
 .infoH{
     text-align: center;
     align-items: center;
@@ -26,13 +28,13 @@ div.header{
     text-align-all: center;
     display: flex;
 }
-
+/*Logo del "contacto"*/
 .header img{
     height: 100px;
     border-radius: 50px;
     vertical-align: center;
 }
-
+/*Aqui ira el cuerpo de la pagina, el chat*/
 div.body{
     background-image: url("../media/imgs/linkin-park.jpg");
     background-attachment: fixed;
@@ -42,22 +44,21 @@ div.body{
     padding: 5%;
     overflow-y: scroll;
 }
-
+/*Solamente para mostrar el boton para iniciar la historia*/
 div.start{
     text-align: center;
     margin: auto;
 }
-
+/*Propiedades del boton para iniciar*/
 .start button{
     width: 100px;
-
 }
-
+/*Div donde ira apareciendo el chat del lado izquierdo*/
 div.left{
     float: left;
     width: 100%;
 }
-
+/*Div donde ira apareciendo el chat del lado derecho*/
 div.right{
     float: right;
     width: 100%;
@@ -66,7 +67,7 @@ div.right{
     line-height: 1.6;
 }
 
-
+/*Propiedades de texto de la burbuja de chat*/
 .bubble p{
     font-size: 30px;
     color: white;
@@ -78,7 +79,7 @@ div.right{
     max-width: 40vw;
     text-justify: none;
 }
-
+/*Burbuja de chat de lado izquierdo*/
 div.left .bubble {
     position: relative;
     background: #7e7e8f;
@@ -93,6 +94,7 @@ div.left .bubble {
     display: flex;
     justify-content: center;
 }
+/*Aqui se le agrega el triangulito que aparece a la izquierda*/
 div.left .bubble :after {
     content: '';
     position: absolute;
@@ -106,7 +108,7 @@ div.left .bubble :after {
     left: -20px;
     margin-top: -10px;
 }
-
+/*Div para burbuja de chat del lado derecho*/
 div.right .bubble {
     float: right;
     position: relative;
@@ -121,7 +123,10 @@ div.right .bubble {
     padding: 0;
     display: flex;
     justify-content: center;
+    margin-left: 50%;
+    margin-bottom: 20px;
 }
+/*Para mostrar el triangulo*/
 div.right .bubble:after {
     content: '';
     position: absolute;
@@ -135,14 +140,14 @@ div.right .bubble:after {
     right: -20px;
     margin-top: -10px;
 }
-
+/*Propiedades para que las imagenes encajen correctamente*/
 .bubble img{
     max-width: 40vw;
     max-height: 60vh;
     margin: 1vw 1vh;
     border-radius: 20px;
 }
-
+/*P para poder mostrar las horas a la que se envia mensaje*/
 p.horas{
     color: black;
     font-size: 15px;
@@ -152,7 +157,7 @@ p.horas{
     padding-top: 20%;
     margin: 0;
 }
-
+/*Botones que apareceran en el chat para ir desvelando la conversacion*/
 .messages button{
     width: 50px;
     color: white;
@@ -160,10 +165,32 @@ p.horas{
     border: 0;
     font-size: 25px;
 }
-
-
+/*Un iframe para adaptarse a las propiedades de la burbuja*/
 iframe{
     padding: 1vw 1vh;
     border: 0;
     border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+/*@media para poder hacer que no se desborde la pagina a la hora de minimizarse*/
+@media (max-width: 600px){
+    div.left,div.right{
+        line-height: 1.6;
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+    }
+    div.left{
+        margin-right: 100%;
+    }
+    div.right .bubble{
+        flex-direction: column;
+        margin-left: 50%;
+        margin-bottom: 2vh;
+    }
+
+    iframe{
+        width: 35vw;
+        height: fit-content;
+    }
 }
