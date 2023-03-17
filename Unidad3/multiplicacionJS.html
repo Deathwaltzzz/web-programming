@@ -1,0 +1,24 @@
+<!--Este documento es un ejemplo de una multiplicacion
+    utilizando una funcion de JS
+    Autor: Leonardo Contreras Martinez-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+</head>
+<body>
+    <p id="result"> </p>
+
+    <script>
+      //Asignamos una funcion a una variable
+      var multiplicacion = myMultiplicacion(6,8);
+      //La variable la asignamos a una instruccion de JS
+      document.getElementById("result").innerHTML = multiplicacion
+
+      //Creamos la funcion con dos parametros y realizamos la multiplicacion
+      function myMultiplicacion(num1,num2) {
+        return num1 * num2;
+      }
+    </script>
+</body>
+</html>

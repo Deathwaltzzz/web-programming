@@ -1,0 +1,28 @@
+<!--Este es un ejercicio donde JS se encuentra entre
+    Las etiquetas HEAD y se ccrea una funcion
+    Autor: Leonardo Contreras Martinez-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS on head</title>
+
+</head>
+<body>
+
+  <p>JS in Head Tag</p>
+  <p id="changeThis">A paragraph</p>
+
+  <button type="button" onclick="changeP()">Try it!</button>
+
+
+</body>
+</html>
+
+<script>
+  function changeP(){
+    document.getElementById("changeThis").innerHTML = "Paragraph Changed";
+  }
+</script>

@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div.header{
+    height: 20vh;
+    background: darkslategray;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+}
+
+.infoH h1{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    vertical-align: center;
+}
+
+.infoH{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align-all: center;
+    display: flex;
+}
+
+.header img{
+    height: 100px;
+    border-radius: 50px;
+    vertical-align: center;
+}
+
+div.body{
+    background-image: url("../media/imgs/linkin-park.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+    height: 80vh;
+    padding: 5%;
+}
+
+div.start{
+    text-align: center;
+    margin: auto;
+}
+
+.start button{
+    
+}
+
+div.left{
+    float: left;
+}

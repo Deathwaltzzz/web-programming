@@ -1,0 +1,31 @@
+<!--Este es el primer ejercicio de JS
+    Autor: Leonardo Contreras Martinez-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Primer JS</title>
+</head>
+<body>
+    <h2>What can Javascript do?</h2>
+    <p id="demo">Javascript can change html content</p>
+    <!--El atributo onclick es el evento del boton-->
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello Javascript!" '>
+        Click me!
+    </button>
+    <p>-------------------------------------------------------------------------------------------------</p>
+    <h2>Date method</h2>
+    <!--Se muestra la fecha y hora al darle click al boton-->
+    <button type="button" onclick="document.getElementById('theDate').innerHTML = Date()">
+        Click me to display Date and Time
+    </button>
+    <p id="theDate"></p>
+
+    <p>-------------------------------------------------------------------------------------------------------------</p>
+    <h2>JS can show hidden HTML elements</h2>
+    <p id="showElement" style="display:none">Hello JavaScript!</p>
+    <!--Muestra el elemento escondido con JavaScript-->
+    <button type="button" onclick="document.getElementById('showElement').style.display = 'block'">
+        Click me!
+    </button>
+</body>
+</html>
