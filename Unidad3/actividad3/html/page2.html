@@ -1,0 +1,191 @@
+<!--
+Documento html donde se mostrara la pagina 'nu metal'
+Me diverti demasiado con esta pagina (llore y sufri) ya que trate de implementar muchas cosas pero no pude y me frustre, luego descubrire como.
+Me gusto el resultado por lo que no me quejo, solamente un detalle que no pude resolver con el css pero x
+Autor: Leonardo Contreras Martinez
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nu-metal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+<!--    Este script tiene una imagen que era mas facil descargarla pero me dio curiosidad este metodo-->
+    <script src="https://kit.fontawesome.com/3d711d791a.js" crossorigin="anonymous"></script>
+</head>
+<body class="nu">
+<!--Script principal de la pagina-->
+<script defer src="../js/script.js"></script>
+<!--Header de la pagina, tiene 2 secciones y un boton para desplegar el menu en caso de que el viewport sea chico-->
+    <header class="nu">
+        <div class="logo">
+            <h1>Nu Metal</h1>
+        </div>
+        <button class="toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav">
+            <ul class="nu">
+                <li data-list="1">Home</li>
+                <li data-list="2">Bands</li>
+            </ul>
+        </div>
+    </header>
+<!--Contenido principal de la pagina-->
+    <main>
+<!--        Seccion home o sea el inicio-->
+        <section class="home active" data-content="1">
+            <div class="contentNu">
+                <h1>What's nu metal?</h1>
+                <p>Nu metal is a subgenre of heavy metal that emerged in the late 1990s and early 2000s. The term "nu metal" is a portmanteau of "new metal," which was used to describe the genre's fusion of metal, hip-hop, and alternative rock. Nu metal is characterized by heavy, down-tuned guitars, rapped or spoken vocals, and electronic elements such as samples and turntables.\
+                    <br>
+                    Nu metal emerged in the mid-1990s as a response to the dominance of grunge and alternative rock. The first bands to be classified as nu metal were Korn, Deftones, and Tool. These bands combined the heavy, riff-based sound of metal with the attitude and aesthetics of alternative rock.
+                    <br>
+                    The genre's breakthrough came in 1998 with the release of Korn's third album, "Follow the Leader." The album featured the hit single "Freak on a Leash," which featured Jonathan Davis's signature vocal style of alternating between singing and rapping. The album sold over 10 million copies and helped to popularize nu metal.
+                    <br>
+                    Nu metal continued to gain popularity throughout the late 1990s and early 2000s. Bands like Limp Bizkit, Slipknot, and System of a Down achieved mainstream success with their unique takes on the genre. Limp Bizkit, in particular, became one of the biggest bands in the world with their 2000 album "Chocolate Starfish and the Hot Dog Flavored Water."
+                    <br>
+                    Despite its commercial success, nu metal was often criticized for its simplistic lyrics and reliance on formulaic song structures. The genre was also accused of being overly commercial and pandering to the lowest common denominator.
+                    <br>
+                    By the mid-2000s, nu metal's popularity began to wane. Many of the genre's biggest bands either disbanded or shifted towards different styles of music. However, nu metal's influence can still be heard in contemporary metal and alternative rock. Bands like Bring Me the Horizon, Code Orange, and Deafheaven incorporate elements of nu metal into their music.
+                </p>
+                <h1>What make's nu metal unique</h1>
+                <p>
+                    While it incorporates elements of traditional metal, nu metal is distinguished by a unique blend of sounds that set it apart from other metal genres. Here are some key characteristics that make nu metal special:
+                <ul class="switchList">
+                    <li class="switch" data-tab="1">Fusion of different styles <br> <p data-page="1"></p></li>
+                    <li class="switch" data-tab="2">Emphasis on rythm <br> <p data-page="2"></p></li>
+                    <li class="switch" data-tab="3">Emotional lyrics <br> <p data-page="3"></p></li>
+                    <li class="switch" data-tab="4">Experimentation <br> <p data-page="4"></p></li>
+                    <li class="switch" data-tab="5">Mainstream appeal <br> <p data-page="5"></p></li>
+                </ul>
+                </p>
+            </div>
+        </section>
+<!--        Seccion de las bandas, cada banda cuenta con su propio div debido a que no queria ya meterme mucho con el js ademas de que queria hacer unas cositas que solamente asi podia hacerlo-->
+        <section class="bands" data-content="2">
+            <div class="innerIndex">
+                <ul class="index">
+                    <li class="index" data-name="lp"><a href="#">Linkin Park</a></li>
+                    <li class="index" data-name="korn"><a href="#">Korn</a></li>
+                    <li class="index" data-name="soad"><a href="#">SOAD</a></li>
+                    <li class="index" data-name="deftones"><a href="#">Deftones</a></li>
+                    <li class="index" data-name="bizkit"><a href="#">Limp Bizkit</a></li>
+                    <li class="index" data-name="bmth"><a href="#">BMTH</a></li>
+                </ul>
+            </div>
+            <div class="lp hide" data-band="1">
+                <div class="mainContent">
+                    <h1>Linkin Park</h1>
+                    <br>
+                    <p>
+                        Linkin Park is a band that has made a significant impact on the nu metal genre. The band emerged in the late 1990s and early 2000s as a pioneer of the genre, blending elements of heavy metal, alternative rock, and hip-hop to create a unique sound that resonated with fans around the world.
+                        <br>
+                        The band's debut album, "Hybrid Theory," released in 2000, was a commercial and critical success, selling over 10 million copies in the United States alone. The album's blend of heavy riffs, rap verses, and melodic hooks, combined with its emotionally charged lyrics, struck a chord with fans and established Linkin Park as one of the leading bands of the nu metal movement.
+                        <br>
+                        Linkin Park's impact on nu metal can be seen in several ways. First, the band's unique sound, which blended multiple genres, paved the way for other bands to experiment with different sounds and styles. Many nu metal bands that emerged in the early 2000s drew inspiration from Linkin Park's hybrid approach, incorporating elements of rap, electronic music, and alternative rock into their own music.
+                        <br>
+                        Second, Linkin Park's lyrics, which dealt with themes of alienation, anger, and depression, resonated with a generation of fans who were struggling to find their place in the world. The band's emotional honesty and vulnerability helped to establish a new standard for authenticity in the nu metal genre, inspiring other bands to write more personal and introspective lyrics.
+                        <br>
+                        Third, Linkin Park's success in the mainstream helped to bring nu metal to a wider audience. The band's ability to blend heavy riffs with catchy melodies and accessible lyrics helped to make nu metal more palatable to a mainstream audience that might not have been interested in more traditional metal.
+                        <br>
+                        Overall, Linkin Park's impact on nu metal cannot be overstated. The band's unique sound, emotionally charged lyrics, and mainstream appeal helped to establish nu metal as a significant genre of rock music in the early 2000s, and their influence can still be felt in the music of many nu metal bands today.
+                    </p>
+                </div>
+            </div>
+            <div class="korn hide">
+                <div class="mainContent">
+                    <h1>Korn</h1>
+                    <p>
+                        Korn is a band that has had a significant impact on the nu metal genre. The band formed in Bakersfield, California in 1993, and was made up of Jonathan Davis on vocals and bagpipes, James "Munky" Shaffer on guitar, Brian "Head" Welch on guitar, Reginald "Fieldy" Arvizu on bass, and David Silveria on drums. The band's unique sound, which blended heavy riffs with hip-hop and electronic elements, quickly gained a following and helped to establish Korn as one of the pioneers of the nu metal genre.
+                        <br>
+                        Korn's impact on nu metal can be seen in several ways. First, the band's use of heavy, downtuned guitars and aggressive rhythms helped to define the sound of nu metal. Korn's music was darker and more intense than many of the other popular rock bands of the time, and their use of hip-hop-inspired beats and electronic elements helped to set them apart from other metal bands.
+                        <br>
+                        Second, Korn's emotionally charged lyrics, which dealt with themes of anger, frustration, and alienation, struck a chord with a generation of fans who were struggling to find their place in the world. The band's raw honesty and vulnerability helped to establish a new standard for authenticity in the nu metal genre, inspiring other bands to write more personal and introspective lyrics.
+                        <br>
+                        Third, Korn's live shows were legendary for their intensity and energy. The band's dynamic stage presence and Davis' powerful vocals helped to make Korn one of the most electrifying live acts of the nu metal era.
+                        <br>
+                        Overall, Korn's impact on nu metal cannot be overstated. The band's unique sound, emotionally charged lyrics, and dynamic live shows helped to establish nu metal as a significant genre of rock music in the 1990s and early 2000s. Their influence can still be felt in the music of many nu metal bands today, and they continue to be a major force in the rock music scene.
+                    </p>
+                </div>
+            </div>
+            <div class="soad hide">
+                <div class="mainContent">
+                    <h1>System of a Down</h1>
+                    <p>
+                        System of a Down is an American rock band formed in Glendale, California, in 1994. The band consists of Serj Tankian (vocals, keyboards), Daron Malakian (guitar, vocals), Shavo Odadjian (bass, backing vocals), and John Dolmayan (drums). System of a Down's music incorporates a wide range of influences, including heavy metal, punk rock, Armenian folk music, and Middle Eastern music, creating a unique sound that helped to distinguish the band from other nu metal acts of the time.
+                        <br>
+                        System of a Down's impact on nu metal can be seen in several ways. First, the band's blend of heavy riffs, aggressive vocals, and unconventional song structures helped to push the boundaries of the nu metal genre. System of a Down's music was more complex and challenging than many of the other popular nu metal bands of the time, incorporating elements of progressive rock and experimental music.
+                        <br>
+                        Second, System of a Down's lyrics, which dealt with political and social issues, helped to establish a new standard of intellectualism in the nu metal genre. The band's socially conscious themes and sharp critiques of politics and society helped to inspire a new generation of politically engaged rock musicians.
+                        <br>
+                        Third, System of a Down's success in the mainstream helped to bring nu metal to a wider audience. The band's ability to blend heavy riffs with unconventional song structures and socially conscious lyrics helped to make nu metal more palatable to a mainstream audience that might not have been interested in more traditional metal.
+                        <br>
+                        Overall, System of a Down's impact on nu metal is significant. The band's unique sound, socially conscious lyrics, and mainstream success helped to establish nu metal as a significant genre of rock music in the late 1990s and early 2000s. Their influence can still be heard in the music of many nu metal bands today, and they continue to be a major force in the rock music scene.
+                    </p>
+                </div>
+            </div>
+            <div class="deftones hide">
+                <div class="mainContent">
+                    <h1>Deftones</h1>
+                    <p>
+                        Deftones is an American alternative metal band formed in Sacramento, California, in 1988. The band consists of Chino Moreno (vocals, guitar), Stephen Carpenter (guitar), Sergio Vega (bass), Frank Delgado (turntables, keyboards), and Abe Cunningham (drums). Deftones' music is characterized by its heavy, atmospheric sound, blending elements of alternative rock, metal, and shoegaze, which helped to set them apart from other nu metal bands.
+                        <br>
+                        Deftones' impact on nu metal can be seen in several ways. First, the band's use of heavy, atmospheric guitars and ethereal vocals helped to establish a new standard of sonic experimentation in the nu metal genre. Deftones' music was more complex and nuanced than many of the other popular nu metal bands of the time, incorporating elements of post-rock, shoegaze, and experimental music.
+                        <br>
+                        Second, Deftones' ability to blend heavy riffs with melodic vocals and introspective lyrics helped to establish a new standard of emotional depth in the nu metal genre. The band's lyrics, which dealt with themes of alienation, introspection, and inner turmoil, helped to inspire a new generation of emotionally engaged rock musicians.
+                        <br>
+                        Third, Deftones' success in the mainstream helped to bring nu metal to a wider audience. The band's ability to blend heavy guitars with ethereal atmospheres and introspective lyrics helped to make nu metal more accessible to a mainstream audience that might not have been interested in more traditional metal.
+                        <br>
+                        Overall, Deftones' impact on nu metal is significant. The band's unique sound, emotional depth, and mainstream success helped to establish nu metal as a significant genre of rock music in the late 1990s and early 2000s. Their influence can still be heard in the music of many nu metal bands today, and they continue to be a major force in the rock music scene.
+                    </p>
+                </div>
+            </div>
+            <div class="bizkit hide">
+                <div class="mainContent">
+                    <h1>Limp Bizkit</h1>
+                    <p>
+                        Limp Bizkit is an American rap rock band formed in Jacksonville, Florida, in 1994. The band consists of Fred Durst (vocals), Wes Borland (guitar), Sam Rivers (bass), John Otto (drums), and DJ Lethal (turntables, keyboards). Limp Bizkit's music is characterized by its heavy guitars, aggressive rapping, and use of DJ scratching, which helped to popularize the nu metal genre in the late 1990s and early 2000s.
+                        <br>
+                        Limp Bizkit's impact on nu metal can be seen in several ways. First, the band's fusion of heavy guitars with rap vocals and DJ scratching helped to establish a new sound in the nu metal genre. Limp Bizkit's music was more accessible and commercially viable than many of the other nu metal bands of the time, blending elements of hip-hop and metal to create a new sound that appealed to a wide audience.
+                        <br>
+                        Second, Limp Bizkit's success in the mainstream helped to bring nu metal to a wider audience. The band's ability to blend heavy guitars with rap vocals and catchy choruses helped to make nu metal more palatable to a mainstream audience that might not have been interested in more traditional metal.
+                        <br>
+                        Third, Limp Bizkit's impact on the fashion and culture of the nu metal scene cannot be overstated. The band's signature red baseball cap and baggy clothing became a fashion statement for many nu metal fans, and their music videos and live shows helped to establish a new standard of spectacle and showmanship in the genre.
+                        <br>
+                        Overall, Limp Bizkit's impact on nu metal is significant. The band's unique sound, mainstream success, and influence on fashion and culture helped to establish nu metal as a significant genre of rock music in the late 1990s and early 2000s. Their influence can still be heard in the music of many nu metal bands today, and they continue to be a polarizing force in the rock music scene.
+                    </p>
+                </div>
+            </div>
+            <div class="bmth hide">
+                <div class="mainContent">
+                    <h1>Bring me the Horizon</h1>
+                    <p>
+                        Bring Me the Horizon (BMTH) is a British metalcore band formed in Sheffield, England, in 2004. The band consists of Oliver Sykes (vocals), Lee Malia (guitar), Matt Kean (bass), Matt Nicholls (drums), and Jordan Fish (keyboards, programming). BMTH's early music was characterized by its heavy metalcore sound, incorporating elements of post-hardcore, deathcore, and electronic music. However, in recent years, the band has expanded its sound to include more elements of nu metal.
+                        <br>
+                        BMTH's incorporation of nu metal into their sound can be seen in several ways. First, the band's use of heavy guitars, electronic elements, and rap vocals has become more prevalent in their recent music. This can be heard on their latest album, "amo" (2019), which features a number of songs that incorporate elements of nu metal, including rap vocals, heavy riffs, and electronic beats.
+                        <br>
+                        Second, BMTH's collaborations with other nu metal artists have helped to cement their status as a part of the genre. The band has worked with rapper Dani Filth of Cradle of Filth on the song "Wonderful Life," and with Bring Me the Horizon, and Chester Bennington of Linkin Park on the song "Cross Off."
+                        <br>
+                        Overall, BMTH's incorporation of nu metal into their sound has been met with both praise and criticism from fans and critics alike. Some have praised the band for their willingness to experiment with new sounds and push the boundaries of the genre, while others have criticized them for jumping on the nu metal bandwagon and abandoning their roots in metalcore.
+                        <br>
+                        Regardless of the reception, BMTH's foray into nu metal has helped to keep the genre relevant and fresh, bringing in a new generation of fans and inspiring other bands to experiment with new sounds and styles.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+<!--        Footer de la pagina-->
+    <footer>
+        <img src="../media/imgs/5279111_network_fb_social%20media_facebook_facebook%20logo_icon.png" alt="" class="redes">
+        <img src="../media/imgs/2645000_media_social_spotify_icon.png" alt="" class="redes">
+        <img src="../media/imgs/5279112_camera_instagram_social%20media_instagram%20logo_icon.png" alt="" class="redes">
+        <img src="../media/imgs/5279123_tweet_twitter_twitter%20logo_icon.png" alt="" class="redes">
+        <img src="../media/imgs/211904_social_github_icon.png" alt="" class="redes">
+    </footer>
+</body>
+</html>
