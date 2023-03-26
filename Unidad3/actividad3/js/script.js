@@ -168,13 +168,13 @@ function toNu(){
 
 const navToggle = document.querySelector(".toggle");
 const ulActive = document.querySelector("ul.nu");
-
+// Muestra el menu desplegable cuando la pantalla tiene el porcentaje deseado
 navToggle.addEventListener("click", ()=>{
     console.log(ulActive)
      ulActive.classList.toggle("active");
 })
 
-
+// Funcion que muestra la descripcion de cada caracteristica en el apartado principal de la pagina, tambien es el que cambia de pagina
 function switchPagesNU(){
     console.log('hola')
     const navList = document.querySelectorAll(".switch");
@@ -214,12 +214,12 @@ function switchPagesNU(){
         switcher.classList.add('active')
     }
 }
-
+// Es el que cambia las paginas en la pagina nu (xd)
 switchPagesNU();
-
+// Estas 2 lineas de codigo crean un objeto de tipo Audio y un arreglo que contiene las canciones
 var audio = new Audio();
 const music = ["../media/audio/Deftones My Own Summer Official Music Video Warner Vault.mp3","../media/audio/Evolution.mp3","../media/audio/Fighting Myself Official Audio Linkin Park.mp3","../media/audio/Limp Bizkit Break Stuff Official Music Video.mp3","../media/audio/Obey.mp3","../media/audio/System Of A Down Deer Dance Official Audio.mp3"]
-
+// Encargado de reproducir la cancion que toque
 document.onkeydown = function (e){
     const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
     audio.src = music[random(0,4)]
@@ -231,7 +231,7 @@ document.onkeydown = function (e){
     else if(e.altKey && e.which === 83)
         audio.pause();
 }
-
+// Es el que cambia el div de la banda que se muestra, casi lloro haciendo esta coas
 window.onload = () =>{
     if(document.querySelector('.deploy') === null){
         const bands = document.querySelectorAll('li.index')
