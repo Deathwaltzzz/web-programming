@@ -1,0 +1,619 @@
+/*Propiedades generales del html, solamente agregue el scroll behavior*/
+html{
+    scroll-behavior: smooth;
+}
+/*Propiedades del body de la pagina1 o 'r6'*/
+body.r6{
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+    background-image: url("../media/imgs/tom-clancys-rainbow-six-siege-2019-4k-58.jpg");
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/*Propiedades del header, probablemente se reutilize*/
+header{
+    width: 100vw;
+    height: 70px;
+    background: black;
+    display: flex;
+}
+/*Esta parte es el lado izquierdo del header*/
+.leftH{
+    float: left;
+    width: 33vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+}
+/*Propiedades de la etiqueta p en el div left*/
+.leftH p{
+    margin: auto;
+    font-size: 30px;
+    transition: font-size .35s ease-in-out, border-bottom-width .35s ease-in-out;
+    border-bottom: 1px white solid;
+    border-bottom-width: 0.1vh;
+}
+/*Propiedades generales de la etiqueta 'a'*/
+a{
+    margin: auto;
+    text-decoration: none;
+    color: white;
+}
+/*La clase is-active como tal no existe, solamente la uso como un placeholder para el P cuando se switchea de clase*/
+a.is-active p{
+    font-size: 35px;
+    border-bottom: 1px solid white;
+    border-bottom-width: 0.2vh;
+}
+/*No tiene contenido pero es necesaria ya que indica el estado de inactividad de una lista*/
+a.inactive{
+
+}
+/*Para hacer el indice un poco mas 'dinamico'*/
+.leftH p:hover{
+    font-size: 35px;
+    border-bottom: 1px solid white;
+    border-bottom-width: 0.5vh;
+}
+/*Lado derecho del header*/
+.rightH{
+    float: right;
+    width: 33vw;
+    height: 100%;
+    display: flex;
+}
+/*Medio del header*/
+.midH{
+    display: flex;
+    justify-content: center;
+    width: 33vw;
+    height: 100%;
+    align-items: center;
+}
+/*Aqui ira el contenido de la pagina, ya sea texto, imagenes etc... usados en inicio*/
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+/*Las 3 propiedades de abajo son para indicar que div se encuentra en la pagina*/
+.inicio{
+    display: none;
+
+}
+
+.ops{
+    display: none;
+
+}
+
+.stats{
+    display: none;
+}
+/*Indica que esa pagina esta activa por lo que debe mostrar el contenido de este*/
+.active{
+    display: inline-block;
+}
+/*Logo de la paigna*/
+.logo{
+    content: url("../media/imgs/rainbow-six-siege-logo-logo-png-transparent.png");
+    max-width: fit-content;
+    max-height: 50px;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+/*Contenido dentro del div contenido*/
+.actualContent{
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    padding-bottom: 10px;
+    position: relative;
+    margin-bottom: 5vh;
+}
+/*Valores que se intercambian en JS, son una base*/
+.blue{
+    background-image: linear-gradient( 358.7deg,  rgba(42,136,157,.7) 1.7%, rgba(122,197,214,.7) 51.1%, rgba(211,232,242,1) 95.5% );
+}
+
+.grey{
+    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+}
+
+.actualContent:before{
+    filter: opacity(10%);
+}
+/*Propiedades del h1 en la pagina*/
+.r6 h1{
+    padding-top: 10px;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 10px;
+}
+/*Propiedeades de texto del contenido*/
+.actualContent p{
+    font-size: 24px;
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    color: black;
+    font-weight: bold;
+    text-align: justify;
+}
+/*Div para contener la informacion de los modo de juego*/
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+/*La lista*/
+.list{
+    width: 25vw;
+    height: 100%;
+    border-right: 2px solid black;
+    position: relative;
+}
+
+.list li{
+    text-align: left;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    list-style-type: none;
+    transition: font-size .35s ease-in-out;
+    padding-bottom: 2vh;
+}
+
+.list li:hover{
+    font-size: 35px;
+    cursor: pointer;
+}
+
+ul{
+    padding-right: 10px;
+}
+/*Contenido de la lista*/
+.listContent{
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 1vw;
+}
+
+.listContent img{
+    width: 30vw;
+}
+
+.listContent p{
+    color: white;
+    font-weight: normal;
+    font-size: 24px;
+}
+/*Nuevamente lo mismo, para activar una pagina, no tiene uso como tal mas que para indicar al js que esta activo*/
+.lis-active{
+
+}
+/*Div donde estara el titulo de los operadores*/
+.titleOps{
+    width: 80vw;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    border-radius: 20px;
+}
+
+.titleOps h1{
+    color: white;
+}
+
+.titleOps p{
+    font-size: 25px;
+    padding: 20px;
+    text-align: justify;
+}
+/*Div donde estaran las imagenes de los operadores*/
+.listaOps{
+    background-image: radial-gradient( circle 757px at 14.6% 44.8%,  rgba(60,77,115,0.7) 27.7%, rgba(0,194,209,0.7) 95.9% );
+    width: 80vw;
+    height: fit-content;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+img.logoR{
+    height: 100px;
+    width: auto;
+    transition: height .35s ease;
+}
+
+.logoR:hover{
+    height: 150px;
+}
+/*Footer de las pagina*/
+footer{
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10vh;
+    text-align: center;
+    align-items: center;
+    background: white;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 30px;
+}
+/*Clase para las imagenes de redes*/
+.redes{
+    height: 8vh;
+    width: auto;
+    margin: auto;
+    transition: height .2s ease;
+}
+
+.redes:hover{
+    height: 10vh;
+}
+
+
+p{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+}
+/*Imagen del icono para ir a la otra pagina*/
+img.Tonu{
+    margin: auto;
+    text-align: center;
+    width: auto;
+    height: 50px;
+}
+
+img.Tonu:hover{
+    cursor: pointer;
+    height: 60px;
+    transition: .35s;
+}
+
+/*Media querys de la primer pagina*/
+@media(max-width: 600px){
+    .leftH p{
+        font-size: 2vw;
+    }
+    .leftH:hover{
+        font-size: 3vw;
+    }
+    a.is-active p{
+        font-size: 3vw;
+    }
+
+    .list ul{
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .list ul li{
+        font-size: 4vw;
+        padding-left: 0;
+    }
+
+    .listaOps{
+        overflow: scroll;
+    }
+}
+
+/*En esta parte se acaba el style de la primera pagina*/
+
+/*Aqui comenzara el estilo para la segunda pagina, talvez reutilize clases de la primera*/
+/*Propiedades del cuerpo de la pagina nu*/
+body.nu{
+    margin: 0;
+    padding: 0;
+    font-family: 'Anton', sans-serif;
+    background: url("../media/imgs/nuWp.png") fixed;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+/*Propiedades del h1*/
+body.nu h1{
+    color: white;
+    line-height: 40px;
+    padding: 0;
+    margin-left: 20px;
+}
+/*Header pero del a pagina nu*/
+header.nu{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: black;
+    justify-content: space-between;
+}
+/*Me estaba causando problemas la propiedad 'logo' por lo que simplemente le quite el contenido para que se desplegara bine*/
+.nu .logo{
+    content: "";
+}
+/*Propiedades generales de las ul en la pagina, lo siguiente son del apartado li*/
+ul.nu{
+    color: white;
+    padding-right: 40px;
+    list-style-type: none;
+    display: flex;
+    line-height: 80px;
+    padding-top: 0;
+    margin: 0;
+    font-size: 25px;
+}
+
+.nu li{
+    margin: 0 10px;
+}
+
+.nu li:hover{
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 75px;
+    transition: .35s ease-in-out;
+}
+/*Div del contenido principal en la pagina*/
+div.contentNu{
+    width: 80%;
+    margin: 20px auto;
+    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,.9) 12.6%, rgba(69,103,131,.9) 82.8% );
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 15px;
+}
+/*Propiedades de texto*/
+.contentNu p{
+    padding: 20px;
+    text-align: justify;
+    font-size: 25px;
+}
+/*Mas propiedades de la lista, este caso para cambiar de pagina creo*/
+ul.switchList{
+    list-style-type: none;
+    color: white;
+    text-align: justify;
+    font-size: 20px;
+}
+
+li.switch{
+    padding: 1vh 0;
+}
+
+
+li.switch p{
+    padding: 0;
+}
+
+li.switch:hover{
+    font-size: 25px;
+    padding: 0;
+    line-height: normal;
+}
+
+li.active{
+    font-size: 30px;
+}
+/*Indica que seccion de la pagina esta activa aka que se va a mostrar*/
+section.active{
+    display: block;
+}
+
+section{
+    display: none;
+}
+/*Contenido de la primera pagina*/
+.mainContent{
+    width: 80%;
+    margin: 2vh auto;
+    height: fit-content;
+    padding: 2vh 2vw;
+    background: rgba(0,0,0,.8);
+    border-radius: 30px;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+.mainContent p{
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+/*Indice interior que usare en el apartado bands*/
+.innerIndex{
+    width: 60%;
+    height: fit-content;
+    margin: auto;
+    background-image: linear-gradient(to right, rgba(67, 67, 67, .95) 0%, rgba(0,0,0,.95) 100%);
+    border-radius: 20px;
+}
+/*Lista de las bandas*/
+ul.index{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 30px;
+    line-height: normal;
+}
+/*Para colorear que esta activo*/
+.is-active a{
+    color: crimson;
+}
+/*Los divs de aca abajo son para mostrar la imagen de cada una de las bandas, era mas facil simplemente crear un div que contenga la info general y otro para cargar la imagen
+pero no pense bien en eso realmente xd
+*/
+.lp{
+    margin-top:30px;
+    width: 100vw;
+    background: url("../media/imgs/lpWall.jpg");
+    background-size: cover;
+    filter: blur(10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 0;
+    transition: max-height 0.5s;
+}
+
+.korn{
+    margin-top:30px;
+    width: 100vw;
+    height: fit-content;
+    background: url("../media/imgs/kornWallp.jpg");
+    background-size: cover;
+    filter: blur(10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.soad{
+    margin-top:30px;
+    width: 100vw;
+    height: fit-content;
+    background: url("../media/imgs/soadWall.jpg");
+    background-size: cover;
+    filter: blur(10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deftones{
+    margin-top:30px;
+    width: 100vw;
+    height: fit-content;
+    background: url("../media/imgs/deftonesWall.jpg");
+    background-size: cover;
+    filter: blur(10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bizkit{
+    margin-top:30px;
+    width: 100vw;
+    height: fit-content;
+    background: url("../media/imgs/bizkitWall.jpg");
+    background-size: cover;
+    filter: blur(10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bmth{
+    margin-top:30px;
+    width: 100vw;
+    height: fit-content;
+    background: url("../media/imgs/bmthWall.jpg");
+    background-size: cover;
+    filter: blur(10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Para ocultar la imagen, osea su valor default, era mas facil si lo dejaba en el div normal pero x, me gusta complicarme la vida*/
+.hide{
+    max-height: 0;
+    overflow: hidden;
+}
+/*Para mostrar el contenido de la pagina*/
+.deploy {
+    transition: height 0.5s; /* transition the height */
+    height: auto; /* set the height to auto to allow for dynamic content */
+}
+/*Este es un caso curioso que se usa en los media querys para mostra un menu desplegable*/
+.toggle{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+
+.nu footer{
+    bottom: 100%;
+}
+/*Media querys de la pagina nu*/
+@media (max-width: 768px) {
+    .nu h1{
+        width: max-content;
+    }
+
+    .toggle{
+        display: block;
+
+    }
+
+    .nu ul{
+        flex-direction: column;
+        background: grey;
+        height: calc(100% - 60px);
+        width: 100%;
+        left: 100%;
+        top: 80px;
+        position: fixed;
+        padding: 0;
+        transition: .35s;
+    }
+
+    .nu ul.active{
+        flex-direction: column;
+        background: grey;
+        height: calc(100% - 80px);
+        width: 100%;
+        left: 0;
+        top: 80px;
+        position: fixed;
+        padding: 0;
+        transition: .35s;
+    }
+
+    .nu ul li{
+        margin: auto;
+    }
+
+    ul.index{
+        flex-direction: row;
+        background: none;
+        height: fit-content;
+        width: 100%;
+        left: auto;
+        top: auto;
+        position: relative;
+        padding: 10px 5px;
+        transition: none;
+        font-size: 3vw;
+    }
+
+    ul.index li{
+        padding: 0 10px;
+    }
+
+    .deploy{
+        background-size: 50%;
+    }
+
+}
+
+/*Aquii termina el estilo para la segunda pagina*/
+
+
