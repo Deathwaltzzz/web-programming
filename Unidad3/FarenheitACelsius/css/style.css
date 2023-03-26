@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background: url("../media/temp.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+}
+header{
+    height: 10vh;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    width: fit-content;
+}
+
+header h1{
+    border: 1px red;
+    background: #04AA6D;
+    border-radius: 30px;
+    padding: 2vh 4vw;
+}
+
+.content{
+    width: 80%;
+    height: 50vh;
+    padding: 20px;
+    background: url("../media/bg.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    text-align: center;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.content h2{
+    color: black;
+    margin-bottom: 10px;
+}
+button{
+    margin-bottom: 10px;
+    padding: 15px;
+    background: transparent;
+    border: black 2px solid;
+    border-radius: 20px;
+}
+
+button:hover{
+    font-size: 20px;
+}
+
+body.warm{
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+
+.cold{
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+}

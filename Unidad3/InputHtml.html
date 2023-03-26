@@ -1,0 +1,22 @@
+<!--Este documento de html tiene como funcion mostrar como funciona la funcion prompt de JS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+  <p>Click the button to demonstrate the prompt box.</p>
+  <button type="button" onclick="showPhrase()">Try it!</button>
+  <p id="unSaludo"></p>
+
+  <script>
+    function showPhrase(){
+      var person= prompt("¿Cual es \ntu nombre?", "ASAS")
+      if(person != null){
+        document.getElementById("unSaludo").innerHTML = "Hola " + person + " Como estas hoy?"
+      }
+    }
+  </script>
+</body>
+</html>

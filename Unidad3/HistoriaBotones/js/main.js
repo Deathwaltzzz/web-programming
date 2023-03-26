@@ -1,3 +1,9 @@
+/*
+*Este codigo de JS basicamente lo que hace es usar funciones de botones que estan en la estructura de lhtlm
+* modificando el contenido de un innerHTML o modificando los atributos de un style para ir mostrando la conversacion
+*/
+
+
 function getFirstMessages(){
     document.getElementById("first").innerHTML = "Que onda pai"
     document.getElementById("second").innerHTML = "Que cuentas"
