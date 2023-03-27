@@ -127,6 +127,7 @@ function switchOp(page){
             changeToBlack();
         }
     }
+    // El codigo de aca abajo se encarga de cambiar los divs de la pagina
     toChangeBg.style.background = backgrounds[page - 1];
     changeColor(page);
     document.body.style.background = `url(../media/imgs/${imageNames[page - 1]})`;
@@ -135,12 +136,12 @@ function switchOp(page){
     toChangeH1.innerHTML = titles[page-1]
     fixAndSize();
     window.scroll(0, 0);
-
+    //Para que el fondo no se haga raro
     function fixAndSize(){
         document.body.style.backgroundSize ="100%";
         document.body.style.backgroundAttachment = "fixed"
     }
-
+    // Las 2 funciones de abajo cambian el color del h1 y p1 de la lista de operadores
     function changeToBlack(){
         toChangeP.style.color = "black";
         toChangeH1.style.color = "black";
@@ -151,15 +152,13 @@ function switchOp(page){
         toChangeH1.style.color = "white";
     }
 }
-
+// Funcion para que cuando clickees el logo te mande al inicio de la pagina
 function goToStart(){
     window.location.reload();
 }
 
-const bandas = ["lb.png","lp.png","korn.png","bmth.png"]
 
-
-
+// Funcion que manda a la pagina 2 en la pagina principal. funciona como un anchor tag
 function toNu(){
     window.location.href = "page2.html"
 }
@@ -184,6 +183,7 @@ navToggle.addEventListener("click", ()=>{
 function switchPagesNU(){
     console.log('hola')
     const navList = document.querySelectorAll(".switch");
+    // Obtiene la informacion que tengan el dataset indicado
     for (let i = 0; i < navList.length; i++) {
         const switchTab = navList[i];
         switchTab.addEventListener("click", ()=>{
@@ -192,7 +192,7 @@ function switchPagesNU(){
             switchPage(switchTab, tab)
         })
     }
-
+    // El que cambia de informacion en la lista del apartado principal
     function switchPage(page, tab){
         const info = [
             "Nu metal incorporates elements of metal, punk, hip hop, and other genres. It often features heavy, downtuned guitars, hip hop-inspired beats, and rapped or shouted vocals. This fusion of different styles creates a sound that is distinct from other metal genres.",
@@ -203,7 +203,7 @@ function switchPagesNU(){
         ]
         document.querySelector(`[data-page="${tab}"]`).innerHTML = info[tab-1]
     }
-
+    //Es el que obtiene que paginas pueden ser cambiadas y llama a la funcion para cambiar la pagina
     const navPage = document.querySelectorAll('[data-list]');
     for (let i = 0; i < navPage.length; i++) {
         const navPages = navPage[i]
@@ -213,6 +213,7 @@ function switchPagesNU(){
             switchContent(navPages,numPage)
         })
     }
+    // Para cambiar de pagina y quitar la que estaba activa
     function switchContent(page,tab){
         const switcher = document.querySelector(`[data-content="${tab}"]`)
         const remove = document.querySelector('section.active')
@@ -229,6 +230,7 @@ const music = ["../media/audio/Deftones My Own Summer Official Music Video Warne
 // Encargado de reproducir la cancion que toque
 document.onkeydown = function (e){
     if(audio.paused){
+        // Comprueba si el audio esta pausado, sino reproduce una cancion
         if(e.altKey && e.which === 80) {
             const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
             let pick = random(0,5);
@@ -239,17 +241,17 @@ document.onkeydown = function (e){
             alert(`Now reproducing: ${names[pick]}`)
         }
     }else {
+        // Pausar y controlar volumen
+        let curr = audio.volume;
         if (e.altKey && e.which === 78)
             audio.pause()
         else if (e.altKey && e.which === 37) {
             console.log('ola')
-            var curr = audio.volume
             if(curr < 0.1)
                 alert('That\'s the lowest you can go')
             else
                 audio.volume = curr - 0.1
         }else if(e.altKey && e.which === 39){
-            var curr = audio.volume
             if(curr >= 1)
                 alert('You can\'t turn up the volume any more!')
             else
@@ -260,6 +262,7 @@ document.onkeydown = function (e){
 
 // Es el que cambia el div de la banda que se muestra, casi lloro haciendo esta coas
 window.onload = () =>{
+    // Se comprueba que no haya algun elemento deployado ya para que no tire error
     if(document.querySelector('.deploy') === null){
         const bands = document.querySelectorAll('li.index')
         for (let i = 0; i < bands.length; i++) {
@@ -275,7 +278,8 @@ window.onload = () =>{
     }else{
         console.log("hola")
     }
-
+/*Esta funcion de lo que se encarga es de cambiar el div de la banda que se muestra, tambien como cambiar el class del div activo por motivos
+* esteticos puramente, ademas de que se ve mas organizado*/
     function switchBand(band, name) {
         let switcher = document.querySelector(`.${name}`);
         if(document.querySelector('.is-active') === null){
@@ -300,6 +304,7 @@ window.onload = () =>{
 * */
 const reloadNU = document.getElementById('logo')
 console.log(reloadNU.innerHTML)
+// La funcion para que se recargue con click
 reloadNU.addEventListener('click',()=>{
     location.reload();
 })
