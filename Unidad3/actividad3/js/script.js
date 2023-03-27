@@ -170,7 +170,7 @@ const ulActive = document.querySelector("ul.nu");
 // Muestra el menu desplegable cuando la pantalla tiene el porcentaje deseado
 navToggle.addEventListener("click", ()=>{
     console.log(ulActive)
-     ulActive.classList.toggle("active");
+    ulActive.classList.toggle("active");
     let toHide = document.querySelectorAll('.index');
     document.querySelector('.innerIndex').classList.toggle('hide')
     for (let i = 0; i < toHide.length; i++) {
@@ -238,6 +238,7 @@ document.onkeydown = function (e){
             console.log(audio)
             console.log("hola")
             audio.play();
+            audio.loop = true;
             alert(`Now reproducing: ${names[pick]}`)
         }
     }else {
@@ -278,8 +279,8 @@ window.onload = () =>{
     }else{
         console.log("hola")
     }
-/*Esta funcion de lo que se encarga es de cambiar el div de la banda que se muestra, tambien como cambiar el class del div activo por motivos
-* esteticos puramente, ademas de que se ve mas organizado*/
+    /*Esta funcion de lo que se encarga es de cambiar el div de la banda que se muestra, tambien como cambiar el class del div activo por motivos
+    * esteticos puramente, ademas de que se ve mas organizado*/
     function switchBand(band, name) {
         let switcher = document.querySelector(`.${name}`);
         if(document.querySelector('.is-active') === null){
