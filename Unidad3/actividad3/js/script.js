@@ -245,13 +245,13 @@ document.onkeydown = function (e){
         let curr = audio.volume;
         if (e.altKey && e.which === 78)
             audio.pause()
-        else if (e.altKey && e.which === 37) {
+        else if (e.altKey && e.which === 49) {
             console.log('ola')
             if(curr < 0.1)
                 alert('That\'s the lowest you can go')
             else
                 audio.volume = curr - 0.1
-        }else if(e.altKey && e.which === 39){
+        }else if(e.altKey && e.which === 48 ){
             if(curr >= 1)
                 alert('You can\'t turn up the volume any more!')
             else

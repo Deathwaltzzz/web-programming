@@ -593,7 +593,7 @@ pero no pense bien en eso realmente xd
     line-height: 60px;
     display: none;
 }
-
+/*Para asegurar que el footer siempre este abajo*/
 .nu footer{
     bottom: 100%;
 }
