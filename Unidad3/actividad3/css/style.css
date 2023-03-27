@@ -468,7 +468,7 @@ section{
 }
 /*Indice interior que usare en el apartado bands*/
 .innerIndex{
-    width: 60%;
+    width: 80%;
     height: fit-content;
     margin: auto;
     background-image: linear-gradient(to right, rgba(67, 67, 67, .95) 0%, rgba(0,0,0,.95) 100%);
@@ -480,8 +480,18 @@ ul.index{
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
-    font-size: 30px;
     line-height: normal;
+    overflow-x: scroll;
+}
+
+ul.index li{
+    padding: 0 10px;
+    width: max-content;
+    font-size: 2rem;
+}
+
+ul.index li:hover{
+    font-size: 3rem;
 }
 /*Para colorear que esta activo*/
 .is-active a{
@@ -646,6 +656,7 @@ pero no pense bien en eso realmente xd
 
     ul.index li{
         padding: 0 10px;
+        width: max-content;
     }
 
     .deploy{
