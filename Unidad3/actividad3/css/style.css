@@ -461,11 +461,11 @@ pero no pense bien en eso realmente xd
     background: url("../media/imgs/lpWall.jpg");
     background-size: cover;
     filter: blur(10%);
-    display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: 0;
+    height: fit-content;
+    display: none;
     transition: max-height 0.5s;
 }
 
@@ -476,7 +476,7 @@ pero no pense bien en eso realmente xd
     background: url("../media/imgs/kornWallp.jpg");
     background-size: cover;
     filter: blur(10%);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -488,7 +488,7 @@ pero no pense bien en eso realmente xd
     background: url("../media/imgs/soadWall.jpg");
     background-size: cover;
     filter: blur(10%);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -500,7 +500,7 @@ pero no pense bien en eso realmente xd
     background: url("../media/imgs/deftonesWall.jpg");
     background-size: cover;
     filter: blur(10%);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -512,19 +512,19 @@ pero no pense bien en eso realmente xd
     background: url("../media/imgs/bizkitWall.jpg");
     background-size: cover;
     filter: blur(10%);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
 .bmth{
-    margin-top:30px;
+    margin: auto;
     width: 100vw;
     height: fit-content;
     background: url("../media/imgs/bmthWall.jpg");
     background-size: cover;
     filter: blur(10%);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -535,8 +535,8 @@ pero no pense bien en eso realmente xd
 }
 /*Para mostrar el contenido de la pagina*/
 .deploy {
-    transition: height 0.5s; /* transition the height */
-    height: auto; /* set the height to auto to allow for dynamic content */
+    display: flex;
+    margin-bottom: 20px;
 }
 /*Este es un caso curioso que se usa en los media querys para mostra un menu desplegable*/
 .toggle{

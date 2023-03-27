@@ -14,6 +14,8 @@ function getTemp(){
     }
 }
 
+
+
 function doDate()
 {
     var str = "";

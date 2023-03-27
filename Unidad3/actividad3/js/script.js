@@ -268,3 +268,11 @@ window.onload = () =>{
         console.log(switcher)
     }
 }
+/*Esto obtiene el id del h1 para que cuando se le de click recargue la pagina, una alternativa a tener que
+* switchear de pagina a inicio mucho mas facil
+* */
+const reloadNU = document.getElementById('logo')
+console.log(reloadNU.innerHTML)
+reloadNU.addEventListener('click',()=>{
+    location.reload();
+})
