@@ -36,6 +36,7 @@ header{
     transition: font-size .35s ease-in-out, border-bottom-width .35s ease-in-out;
     border-bottom: 1px white solid;
     border-bottom-width: 0.1vh;
+    margin-left: 10px;
 }
 /*Propiedades generales de la etiqueta 'a'*/
 a{
@@ -286,10 +287,17 @@ img.Tonu:hover{
 
 /*Media querys de la primer pagina*/
 @media(max-width: 600px){
+
+    .leftH a{
+
+    }
+    .actualContent p{
+        font-size: 4vw;
+    }
     .leftH p{
         font-size: 2vw;
     }
-    .leftH:hover{
+    .leftH p:hover{
         font-size: 3vw;
     }
     a.is-active p{
@@ -297,7 +305,7 @@ img.Tonu:hover{
     }
 
     .list ul{
-        margin-left: 0;
+        margin-left: 10px;
         padding-left: 0;
     }
     .list ul li{
@@ -305,8 +313,35 @@ img.Tonu:hover{
         padding-left: 0;
     }
 
+    .list ul li:hover{
+        font-size: 5vw;
+    }
+
+    .listContent p{
+        font-size: 3vw;
+        padding-right: 20px;
+    }
+
     .listaOps{
         overflow: scroll;
+    }
+
+    img.logoR{
+        height: 10vh;
+    }
+
+    img.logoR:hover{
+        height: 11vh;
+    }
+
+    .titleOps p{
+        font-size: 3vw;
+        margin-top: 0;
+    }
+
+    .titleOps h1{
+        margin-bottom: 0;
+        font-size: 5vw;
     }
 }
 
@@ -625,6 +660,10 @@ pero no pense bien en eso realmente xd
         font-size: 30px;
         padding-bottom: 10px;
         line-height: 20px;
+    }
+
+    .innerIndex{
+        width: 80%;
     }
 
 }

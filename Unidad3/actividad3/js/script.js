@@ -172,6 +172,12 @@ const ulActive = document.querySelector("ul.nu");
 navToggle.addEventListener("click", ()=>{
     console.log(ulActive)
      ulActive.classList.toggle("active");
+    let toHide = document.querySelectorAll('.index');
+    document.querySelector('.innerIndex').classList.toggle('hide')
+    for (let i = 0; i < toHide.length; i++) {
+        toHide.item(i).classList.toggle('hide')
+    }
+
 })
 
 // Funcion que muestra la descripcion de cada caracteristica en el apartado principal de la pagina, tambien es el que cambia de pagina
@@ -239,7 +245,7 @@ document.onkeydown = function (e){
             console.log('ola')
             var curr = audio.volume
             if(curr < 0.1)
-                alert('That\'s the lowst you can go')
+                alert('That\'s the lowest you can go')
             else
                 audio.volume = curr - 0.1
         }else if(e.altKey && e.which === 39){
