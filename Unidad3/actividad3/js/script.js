@@ -218,19 +218,40 @@ function switchPagesNU(){
 switchPagesNU();
 // Estas 2 lineas de codigo crean un objeto de tipo Audio y un arreglo que contiene las canciones
 var audio = new Audio();
+const names = ['My own summer by Deftones','Evolution by Korn','Fighting my Self by Linkin Park', 'Break Stuff by Limp Bizkit','Obey by BMTH','Deer Dance by System of a Down']
 const music = ["../media/audio/Deftones My Own Summer Official Music Video Warner Vault.mp3","../media/audio/Evolution.mp3","../media/audio/Fighting Myself Official Audio Linkin Park.mp3","../media/audio/Limp Bizkit Break Stuff Official Music Video.mp3","../media/audio/Obey.mp3","../media/audio/System Of A Down Deer Dance Official Audio.mp3"]
 // Encargado de reproducir la cancion que toque
 document.onkeydown = function (e){
-    const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-    audio.src = music[random(0,4)]
-    console.log(audio)
-    if(e.altKey && e.which === 80) {
-        console.log("hola")
-        audio.play();
+    if(audio.paused){
+        const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+        let pick = random(0,5);
+        audio.src = music[pick]
+        console.log(audio)
+        if(e.altKey && e.which === 80) {
+            console.log("hola")
+            audio.play();
+            alert(`Now reproducing: ${names[pick]}`)
+        }
+    }else {
+        if (e.altKey && e.which === 78)
+            audio.pause()
+        else if (e.altKey && e.which === 37) {
+            console.log('ola')
+            var curr = audio.volume
+            if(curr < 0.1)
+                alert('That\'s the lowst you can go')
+            else
+                audio.volume = curr - 0.1
+        }else if(e.altKey && e.which === 39){
+            var curr = audio.volume
+            if(curr >= 1)
+                alert('You can\'t turn up the volume any more!')
+            else
+                audio.volume = curr + 0.1
+        }
     }
-    else if(e.altKey && e.which === 83)
-        audio.pause();
 }
+
 // Es el que cambia el div de la banda que se muestra, casi lloro haciendo esta coas
 window.onload = () =>{
     if(document.querySelector('.deploy') === null){
