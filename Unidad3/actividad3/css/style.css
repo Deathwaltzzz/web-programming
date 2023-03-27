@@ -560,7 +560,6 @@ pero no pense bien en eso realmente xd
 
     .toggle{
         display: block;
-
     }
 
     .nu ul{
@@ -569,7 +568,7 @@ pero no pense bien en eso realmente xd
         height: calc(100% - 60px);
         width: 100%;
         left: 100%;
-        top: 80px;
+        top: 60px;
         position: fixed;
         padding: 0;
         transition: .35s;
@@ -578,10 +577,10 @@ pero no pense bien en eso realmente xd
     .nu ul.active{
         flex-direction: column;
         background: grey;
-        height: calc(100% - 80px);
+        height: calc(100% - 60px);
         width: 100%;
         left: 0;
-        top: 80px;
+        top: 60px;
         position: fixed;
         padding: 0;
         transition: .35s;
@@ -602,6 +601,12 @@ pero no pense bien en eso realmente xd
         padding: 10px 5px;
         transition: none;
         font-size: 3vw;
+        overflow-x: scroll;
+    }
+
+    ul.index li:hover{
+        font-size: 20px;
+        line-height: normal;
     }
 
     ul.index li{
@@ -610,6 +615,16 @@ pero no pense bien en eso realmente xd
 
     .deploy{
         background-size: 50%;
+    }
+
+    header.nu{
+        height: 80px;
+    }
+
+    header.nu h1{
+        font-size: 30px;
+        padding-bottom: 10px;
+        line-height: 20px;
     }
 
 }

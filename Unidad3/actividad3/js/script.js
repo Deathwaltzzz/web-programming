@@ -223,11 +223,11 @@ const music = ["../media/audio/Deftones My Own Summer Official Music Video Warne
 // Encargado de reproducir la cancion que toque
 document.onkeydown = function (e){
     if(audio.paused){
-        const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-        let pick = random(0,5);
-        audio.src = music[pick]
-        console.log(audio)
         if(e.altKey && e.which === 80) {
+            const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+            let pick = random(0,5);
+            audio.src = music[pick]
+            console.log(audio)
             console.log("hola")
             audio.play();
             alert(`Now reproducing: ${names[pick]}`)
