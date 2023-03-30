@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Consolas, serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body.index{
+    background: url("../media/imgs/bgIndex.jpeg") fixed;
+    background-size: 100%;
+    position: relative;
+}
+
+div.startIndex{
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    position: relative;
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.startIndex h1{
+    font-size: 90px;
+    color: white;
+}
+
+.startIndex button{
+    background: none;
+    font-size: 30px;
+    color: white;
+    margin-top: 50px;
+    opacity: 0;
+}
+
+
+button:hover{
+    cursor: pointer;
+}
+
+div.mainContent{
+    width: 80%;
+    height: fit-content;
+    background-image: linear-gradient( 65.9deg,  rgba(85,228,224,1) 5.5%, rgba(75,68,224,0.74) 54.2%, rgba(64,198,238,1) 55.2%, rgba(177,36,224,1) 98.4% );
+    margin: 50px auto;
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    display: none;
+}
+
+.mainContent h2{
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.mainContent p{
+    text-align: center;
+    margin: 30px 0 auto;
+}
+
+.mainContent a{
+    margin-top: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+div.contentInMain{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentInMain h1{
+    color: crimson;
+}
+
+.contentInMain p{
+    color: white;
+    font-size: 15px;
+}
+
+.first,.second,.third{
+    text-align: center;
+    width: 30%;
+}
+
+.first p,.second p,.third p{
+    text-align: justify;
+}

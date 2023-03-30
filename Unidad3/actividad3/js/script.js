@@ -160,7 +160,7 @@ function goToStart(){
 
 // Funcion que manda a la pagina 2 en la pagina principal. funciona como un anchor tag
 function toNu(){
-    window.location.href = "page2.html"
+    window.open("page2.html",'_blank')
 }
 
 //Aqui comienza el script para la pagina 2, talvez reutilize scripts pasados
@@ -210,6 +210,8 @@ function switchPagesNU(){
         navPages.addEventListener('click', ()=>{
             const numPage = navPages.dataset.list
             console.log(numPage)
+            if(parseInt(numPage) === 3)
+                document.location.href='page1.html'
             switchContent(navPages,numPage)
         })
     }
@@ -283,6 +285,64 @@ window.onload = () =>{
     * esteticos puramente, ademas de que se ve mas organizado*/
     function switchBand(band, name) {
         let switcher = document.querySelector(`.${name}`);
+        audio.volume = 0.1;
+        switch(name){
+            case 'lp':
+                audio.src = music[2]
+                if(!audio.paused) {
+                    audio.pause()
+                    audio.play()
+                }else if(audio.paused){
+                    audio.play()
+                }
+                break;
+            case 'korn':
+                audio.src = music[1]
+                if(!audio.paused) {
+                    audio.pause()
+                    audio.play()
+                }else if(audio.paused){
+                    audio.play()
+                }
+                break;
+            case 'soad':
+                audio.src = music[5]
+                if(!audio.paused) {
+                    audio.pause()
+                    audio.play()
+                }else if(audio.paused){
+                    audio.play()
+                }
+                break;
+            case 'deftones':
+                audio.src = music[0]
+                if(!audio.paused) {
+                    audio.pause()
+                    audio.play()
+                }else if(audio.paused){
+                    audio.play()
+                }
+                break;
+            case 'bizkit':
+                audio.src = music[3]
+                if(!audio.paused) {
+                    audio.pause()
+                    audio.play()
+                }else if(audio.paused){
+                    audio.play()
+                }
+                break;
+            case 'bmth':
+                audio.src = music[4]
+                if(!audio.paused) {
+                    audio.pause()
+                    audio.play()
+                }else if(audio.paused){
+                    audio.play()
+                }
+                break;
+
+        }
         if(document.querySelector('.is-active') === null){
             band.classList.toggle('is-active')
             switcher.classList.toggle('deploy');
