@@ -41,11 +41,14 @@ div.startIndex{
     color: white;
     margin-top: 50px;
     opacity: 0;
+    transition: .35s ease-in-out;
 }
 
 
 button:hover{
+    transition: .35s ease-in-out;
     cursor: pointer;
+    font-size: 40px;
 }
 
 div.mainContent{
@@ -89,7 +92,18 @@ div.contentInMain{
 
 .contentInMain p{
     color: white;
-    font-size: 15px;
+    font-size: 20px;
+}
+
+img.desc{
+    width: 400px;
+    height: auto;
+}
+
+img.desc:hover{
+    cursor: pointer;
+    width: 450px;
+    transition: width .35s;
 }
 
 .first,.second,.third{
