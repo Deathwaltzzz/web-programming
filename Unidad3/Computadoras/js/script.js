@@ -223,6 +223,34 @@ if(window.location.href.includes('index.html')){
             window.location.href = 'Gpus.html';
         })
     }
+}else if(window.location.href.includes('os.html')){
+    window.onload = () =>{
+        document.querySelector('.context p').innerHTML = 'An operating system (OS) is a software program that manages computer hardware and provides common services for computer programs. Windows is an operating system created by Microsoft, Linux is an open-source operating system, and Mac OS is an operating system created by Apple Inc. They have evolved significantly over the years, becoming more user-friendly, feature-rich, and secure, and play a critical role in enabling people to use computers for various purposes.'
+        const imgs = ['../media/imgs/MS-DOS_logo_outlined.svg.png','../media/imgs/tux.png','../media/imgs/windows-95-logo-1864241.webp','../media/imgs/w7.webp','../media/imgs/ubuntu.webp','../media/imgs/kali.jpg','../media/imgs/fedora32.jpg','../media/imgs/w10.png']
+        const ids = ['msdos','linux','w95','w7','ubuntu','kali','fedora','w10']
+        for (let i = 0; i < imgs.length; i++) {
+            document.getElementById('content').innerHTML += `<div id=${ids[i]}><img class="os" src="${imgs[i]}"></div>`
+        }
+        const change = document.getElementById(`${ids[4]}`)
+        const possible = ['../media/imgs/Finder_Icon_macOS_Big_Sur.png','../media/imgs/Android_robot.svg.png'];
+        const possibleOptions = ['1. Mac OS','2. Android']
+        console.log(possibleOptions.toString())
+        document.getElementsByClassName('changeOs').item(0).addEventListener('click',() =>{
+            let changeArr = prompt(`What OS you wish to load to the images?, possible options are: ${possibleOptions.toString()}, ANY OTHER VALUE WILL RELOAD THE PAGE`, ' ');
+            switch (parseInt(changeArr)){
+                case 1:
+                    change.innerHTML = `<img class="os" src="${possible[parseInt(changeArr)-1]}">`
+                    break;
+                case 2:
+                    change.innerHTML = `<img class="os" src="${possible[parseInt(changeArr)-1]}">`
+                    break;
+                default:
+                    alert('The page will reload!')
+                    window.location.reload();
+                    break;
+            }
+        })
+    }
 }
 
 

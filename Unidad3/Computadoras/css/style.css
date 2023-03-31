@@ -194,3 +194,84 @@ div.img{
 .changeCpuContent{
     opacity: 0;
 }
+/*Aqui terminan las clases de la pagina processors*/
+
+/*Aqui comienza las clases de la pagina gpu*/
+/*Aqui termina las clases de la pagina gpus*/
+
+/*Aqui comienza las clases de la pagina os*/
+body.os{
+    overflow-x: hidden;
+}
+div.headerOs{
+    width: 100%;
+    height: 20vh;
+    background-image: linear-gradient( 110.3deg,  rgba(73,93,109,1) 4.3%, rgba(49,55,82,1) 96.7% );
+    text-align: center;
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+
+.headerOs h1{
+    color: white;
+    line-height: 20vh;
+}
+
+.index{
+    display: flex;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    margin-right: 10px;
+    max-width: 50%;
+}
+.logoT{
+
+}
+
+.logo{
+    height: 10vh;
+    width: auto;
+    line-height: 20vh;
+    padding: 0 30px;
+}
+
+.content{
+    margin-top: 50px;
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+img.os{
+    height: 120px;
+    width: auto;
+}
+
+.context p{
+    font-size: 30px;
+    padding: 5px 30px;
+}
+
+.os .buttons{
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.os .buttons button{
+    color: crimson;
+    background: black;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.os button:hover{
+    font-size: 20px;
+}
