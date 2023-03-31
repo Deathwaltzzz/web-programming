@@ -1,7 +1,9 @@
-/*This code of JS is going to be in charge of executing actions in the index HTML*/
+// Im using a if to check what html im working with, this way some variables, const or lets don't screw things up
 if(window.location.href.includes('index.html')){
+    /*This code of JS is going to be in charge of executing actions in the index HTML*/
     const scrollToMain = document.getElementById('buttonStartIndex');
     var goOn = false;
+    // Scrolls to the main content of the index page
     scrollToMain.addEventListener('click', () =>{
         let name = prompt('What\'s ur name?', ' ')
         let main = document.querySelector('.mainContent');
@@ -25,6 +27,7 @@ if(window.location.href.includes('index.html')){
         const welcome = document.getElementById('welcomeIndex');
         let welcomeMessage = 'Welcome to the page!';
         let i = 0;
+        // Function to show the welcome message, creating a type effect
         function writeText(){
             if(i < welcomeMessage.length){
                 welcome.innerHTML+= welcomeMessage.charAt(i);
@@ -37,6 +40,7 @@ if(window.location.href.includes('index.html')){
         var goingOp = 10;
         if(writeText()){
             console.log('Write text true')
+            // Recursive function which crates a 'fading' effect
             function sumOpacity(){
                 console.log(`${goingOp} op value`)
                 if(goingOp <= 100){
@@ -51,11 +55,11 @@ if(window.location.href.includes('index.html')){
         writeText()
         var isRunning = false;
         let showCpuP = document.getElementById('cpu')
-
+        // I crated this fuction with the mere purpose of verifying if some piece of code is running
         function running(value){
             isRunning = value;
         }
-
+        // There is 3 codes that are very similar to this, pretty much cuz they are, the difference is that they load different messages onto the page
         showCpuP.addEventListener('click', function cpuMsg(){
             if(!isRunning){
                 console.log(isRunning + ' e')
@@ -67,6 +71,7 @@ if(window.location.href.includes('index.html')){
                     showCpuP.dataset.clicked = 'true';
                     showMsg()
                     disableButton(showCpuP, 'click',`cpuMsg`)
+                    // Same typing effect as before
                     function showMsg(){
                         console.log(isRunning)
                         if(i < msgC.length){
@@ -159,11 +164,13 @@ if(window.location.href.includes('index.html')){
         const firstButton = document.getElementById('firstButtonCpu');
         const secondButton = document.getElementById('secondButtonCpu')
         const thirdButton = document.getElementById('thirdButtonCpu')
+        // Does the same to verify if a code is running
         var isActive = false;
         function activate(value){
             isActive = value
         }
         var i = 10;
+        // Fade effect
         firstButton.addEventListener('click',()=>{
             console.log(isActive)
             show2ndButton()
@@ -180,6 +187,7 @@ if(window.location.href.includes('index.html')){
         })
         var og;
         var restarted = false;
+        // Changes the text depending on what data attribute is passing in, goes from 0 to 4 and resets pretty much eternally
         secondButton.addEventListener('click', () =>{
             if(isActive){
                 let modify = document.getElementById('modifyPCpu');
@@ -219,36 +227,76 @@ if(window.location.href.includes('index.html')){
             }
 
         })
+        // Sends you to the second page
         thirdButton.addEventListener('click',() =>{
             window.location.href = 'Gpus.html';
         })
     }
+//     I worked first on the 4th page, thats why its here xd
 }else if(window.location.href.includes('os.html')){
     window.onload = () =>{
         document.querySelector('.context p').innerHTML = 'An operating system (OS) is a software program that manages computer hardware and provides common services for computer programs. Windows is an operating system created by Microsoft, Linux is an open-source operating system, and Mac OS is an operating system created by Apple Inc. They have evolved significantly over the years, becoming more user-friendly, feature-rich, and secure, and play a critical role in enabling people to use computers for various purposes.'
         const imgs = ['../media/imgs/MS-DOS_logo_outlined.svg.png','../media/imgs/tux.png','../media/imgs/windows-95-logo-1864241.webp','../media/imgs/w7.webp','../media/imgs/ubuntu.webp','../media/imgs/kali.jpg','../media/imgs/fedora32.jpg','../media/imgs/w10.png']
         const ids = ['msdos','linux','w95','w7','ubuntu','kali','fedora','w10']
-        for (let i = 0; i < imgs.length; i++) {
-            document.getElementById('content').innerHTML += `<div id=${ids[i]}><img class="os" src="${imgs[i]}"></div>`
-        }
-        const change = document.getElementById(`${ids[4]}`)
-        const possible = ['../media/imgs/Finder_Icon_macOS_Big_Sur.png','../media/imgs/Android_robot.svg.png'];
-        const possibleOptions = ['1. Mac OS','2. Android']
-        console.log(possibleOptions.toString())
-        document.getElementsByClassName('changeOs').item(0).addEventListener('click',() =>{
-            let changeArr = prompt(`What OS you wish to load to the images?, possible options are: ${possibleOptions.toString()}, ANY OTHER VALUE WILL RELOAD THE PAGE`, ' ');
-            switch (parseInt(changeArr)){
-                case 1:
-                    change.innerHTML = `<img class="os" src="${possible[parseInt(changeArr)-1]}">`
-                    break;
-                case 2:
-                    change.innerHTML = `<img class="os" src="${possible[parseInt(changeArr)-1]}">`
-                    break;
-                default:
-                    alert('The page will reload!')
-                    window.location.reload();
-                    break;
+        // Appending the 8 elements of the array to the html with a function
+        function addArray(){
+            for (let i = 0; i < imgs.length; i++) {
+                document.getElementById('content').innerHTML += `<div id=${ids[i]}><img class="os" src="${imgs[i]}"></div>`
             }
+            changeArray()
+        }
+        const addArrays = document.getElementById('disappearThis');
+        // When you click the button to load the images it calls the function
+        addArrays.addEventListener('click',() =>{
+            addArrays.style.display = 'none'
+            addArray();
+        })
+        // After the function to load images is called, it will then call another function to ensure that the script doesn't break.
+        function changeArray(){
+            const change = document.getElementById(`${ids[4]}`)
+            const possible = ['../media/imgs/Finder_Icon_macOS_Big_Sur.png','../media/imgs/Android_robot.svg.png'];
+            const possibleOptions = ['1. Mac OS','2. Android']
+            console.log(possibleOptions.toString())
+            document.getElementsByClassName('changeOs').item(0).addEventListener('click',() =>{
+                let changeArr = prompt(`What OS you wish to load to the images?, possible options are: ${possibleOptions.toString()}, ANY OTHER VALUE WILL RELOAD THE PAGE`, ' ');
+                switch (parseInt(changeArr)){
+                    case 1:
+                        change.innerHTML = `<img class="os" src="${possible[parseInt(changeArr)-1]}">`
+                        break;
+                    case 2:
+                        change.innerHTML = `<img class="os" src="${possible[parseInt(changeArr)-1]}">`
+                        break;
+                    default:
+                        alert('The page will reload!')
+                        window.location.reload();
+                        break;
+                }
+            })
+        }
+    }
+}else if(window.location.href.includes('Gpus.html')){
+    window.onload = () =>{
+        console.log('e')
+        // This one is a pretty simple code, it just wait for a button tu be clicked and loads a dl into a p tag
+        document.getElementById('buttonGpu').addEventListener('click',() =>{
+            const ps = document.getElementsByTagName('p');
+            for (let i = 0; i < ps.length; i++) {
+                let x = ps.item(i)
+                if(x.className === 'toShow'){
+                    x.innerHTML = `
+                                    <h1>3 Examples</h1>
+                                    <br>
+                                    <dl>
+                                      <dt><strong>Nvidia GeForce RTX 3080:</strong></dt>
+                                        <dd>A high-performance GPU designed for gaming and other graphics-intensive applications.</dd>
+                                      <dt><strong>AMD Radeon RX 6900 XT:</strong></dt>
+                                        <dd>A powerful GPU designed for high-end gaming and content creation.</dd>
+                                      <dt><strong>Nvidia A100:</strong></dt>
+                                        <dd>A specialized GPU designed for use in data centers and high-performance computing applications.</dd>
+                                    </dl> `
+                }
+            }
+            document.getElementById('buttonGpuD').innerHTML += `<br><a href="os.html">Click here to visit the page OS!</a>`
         })
     }
 }

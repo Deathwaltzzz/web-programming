@@ -197,6 +197,98 @@ div.img{
 /*Aqui terminan las clases de la pagina processors*/
 
 /*Aqui comienza las clases de la pagina gpu*/
+body.gpu{
+
+}
+
+.header{
+    background: url('../media/imgs/techlines.jpg') fixed;
+    text-align: left;
+    width: 100%;
+    height: 15vh;
+}
+
+.header h1{
+    color: white;
+    line-height: 15vh;
+    padding-left: 20px;
+}
+
+.contentGpu{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+
+.containerGpuImg{
+    padding-top: 20px;
+    width: 30%;
+    height: fit-content;
+}
+
+.gpuImg{
+    width: 30vw;
+}
+
+.containerGpu{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.red{
+    background-image: radial-gradient( circle 972.6px at 10% 20%,  rgba(243,0,75,1) 0%, rgba(255,93,75,1) 90% );
+    color: white;
+    padding-bottom: 20px;
+}
+
+.green{
+    background-image: linear-gradient( 109.6deg,  rgba(33,103,43,1) 11.3%, rgba(117,162,61,1) 91.1% );
+    padding-bottom: 20px;
+    color: white;
+}
+
+div.showLater{
+    width: 100%;
+    height: fit-content;
+}
+
+div.buttonsGpu{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-image: linear-gradient( 89.9deg,  rgba(178,253,238,0.96) -8.1%, rgba(207,244,254,1) 26.3%, rgba(207,244,254,0.48) 47.5%, rgba(254,219,243,0.63) 61.5%, rgba(254,219,243,1) 78.7%, rgba(254,207,210,1) 109.2% );
+}
+
+div.buttonsGpu button{
+    background: none;
+    color: crimson;
+    font-size: 25px;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.buttonsGpu button:hover{
+    font-size: 30px;
+    line-height: normal;
+}
+
+.toShow dt{
+    padding-left: 10px;
+}
+
+.toShow dd{
+    padding-left: 30px;
+}
+
+.toShow{
+    color: white;
+    padding: 20px 0;
+    background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );
+}
 /*Aqui termina las clases de la pagina gpus*/
 
 /*Aqui comienza las clases de la pagina os*/
@@ -218,7 +310,7 @@ div.headerOs{
     line-height: 20vh;
 }
 
-.index{
+.os .index{
     display: flex;
     height: 100%;
     text-align: center;
