@@ -96,13 +96,14 @@ div.contentInMain{
 }
 
 img.desc{
-    width: 400px;
+    width: 22vw;
     height: auto;
+    transition: ease-in-out .35s;
 }
 
 img.desc:hover{
     cursor: pointer;
-    width: 450px;
+    width: 23vw;
     transition: width .35s;
 }
 
@@ -113,4 +114,83 @@ img.desc:hover{
 
 .first p,.second p,.third p{
     text-align: justify;
+}
+/*Aqui termina las clases de la primer pagina*/
+
+/*Aqui comienza las clases de la segunda pagina*/
+body.cpu{
+    background: url("../media/imgs/cpuBg.png") fixed;
+    background-size: 100%;
+}
+div.headCpu{
+    height: 30vh;
+    width: 100vw;
+    background: black;
+    text-align: center;
+    align-items: center;
+    background: url("../media/imgs/gifWp.gif") fixed;
+    background-size: 100%;
+}
+
+.headCpu h1{
+    color: white;
+    margin: auto;
+    line-height: 30vh;
+    font-size: 5vw;
+}
+
+.titleCpu{
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+    background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );
+}
+
+.titleCpu h1{
+    color: white;
+    line-height: 10vh;
+}
+
+.mainCpu{
+    width: 100%;
+    height: fit-content;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(147,230,241,1) 0%, rgba(145,192,241,1) 45.5% );
+}
+
+.mainCpu .content{
+    padding: 10px 20px;
+    text-align: justify;
+    text-justify: distribute-center-last;
+}
+
+div.img{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.mainCpu p{
+    font-size: 1.5em;
+}
+
+.buttonsCpu{
+    width: 100%;
+    background: #000;
+    height: 5vh;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 30px;
+}
+
+.buttonsCpu button{
+    padding: 5px;
+}
+
+.buttonsCpu button:hover{
+    font-size: 15px;
+}
+
+.changeCpuContent{
+    opacity: 0;
 }
