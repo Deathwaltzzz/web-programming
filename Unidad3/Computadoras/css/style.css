@@ -1,20 +1,22 @@
+/*General aspects for the html*/
 *{
     padding: 0;
     margin: 0;
     border: 0;
     font-family: Consolas, serif;
 }
-
+/*Just modified the smooth behavior*/
 html{
     scroll-behavior: smooth;
 }
-
+/*Here begin the classes for the index page*/
+/*Body of the page 'index'*/
 body.index{
     background: url("../media/imgs/bgIndex.jpeg") fixed;
     background-size: 100%;
     position: relative;
 }
-
+/*Div of the 1st content loaded in the index page*/
 div.startIndex{
     width: 80%;
     margin: auto;
@@ -29,12 +31,12 @@ div.startIndex{
     justify-content: center;
     flex-direction: column;
 }
-
+/*H1 for the div .startIndex*/
 .startIndex h1{
     font-size: 90px;
     color: white;
 }
-
+/*Button properties */
 .startIndex button{
     background: none;
     font-size: 30px;
@@ -44,13 +46,13 @@ div.startIndex{
     transition: .35s ease-in-out;
 }
 
-
+/*Hover for the butotn*/
 button:hover{
     transition: .35s ease-in-out;
     cursor: pointer;
     font-size: 40px;
 }
-
+/*Div properties for the main content on index page*/
 div.mainContent{
     width: 80%;
     height: fit-content;
@@ -62,7 +64,7 @@ div.mainContent{
     padding: 20px;
     display: none;
 }
-
+/*Some text tag properties*/
 .mainContent h2{
     font-size: 22px;
     color: white;
@@ -80,7 +82,7 @@ div.mainContent{
     color: white;
     font-size: 20px;
 }
-
+/*Inner content*/
 div.contentInMain{
     display: flex;
     justify-content: space-between;
@@ -94,7 +96,7 @@ div.contentInMain{
     color: white;
     font-size: 20px;
 }
-
+/*Properties for the images on the inner content*/
 img.desc{
     width: 22vw;
     height: auto;
@@ -115,13 +117,15 @@ img.desc:hover{
 .first p,.second p,.third p{
     text-align: justify;
 }
-/*Aqui termina las clases de la primer pagina*/
+/*Here end the classes for the index page.*/
 
-/*Aqui comienza las clases de la segunda pagina*/
+/*Here begin the classes for the cpu page*/
+/*Body of the cpu page*/
 body.cpu{
     background: url("../media/imgs/cpuBg.png") fixed;
     background-size: 100%;
 }
+/*Div for the header of the cpu page*/
 div.headCpu{
     height: 30vh;
     width: 100vw;
@@ -138,7 +142,7 @@ div.headCpu{
     line-height: 30vh;
     font-size: 5vw;
 }
-
+/*Div for titles*/
 .titleCpu{
     text-align: center;
     width: 100%;
@@ -150,19 +154,19 @@ div.headCpu{
     color: white;
     line-height: 10vh;
 }
-
+/*Div for main content*/
 .mainCpu{
     width: 100%;
     height: fit-content;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(147,230,241,1) 0%, rgba(145,192,241,1) 45.5% );
 }
-
+/*Content*/
 .mainCpu .content{
     padding: 10px 20px;
     text-align: justify;
     text-justify: distribute-center-last;
 }
-
+/*Div for images*/
 div.img{
     width: 100%;
     align-items: center;
@@ -172,7 +176,7 @@ div.img{
 .mainCpu p{
     font-size: 1.5em;
 }
-
+/*Div for the buttons*/
 .buttonsCpu{
     width: 100%;
     background: #000;
@@ -194,13 +198,13 @@ div.img{
 .changeCpuContent{
     opacity: 0;
 }
-/*Aqui terminan las clases de la pagina processors*/
+/*Here end the classes of the pager 'processors'*/
 
-/*Aqui comienza las clases de la pagina gpu*/
+/*Here begin the classes of the page 'gpu'*/
 body.gpu{
 
 }
-
+/*Header for the page*/
 .header{
     background: url('../media/imgs/techlines.jpg') fixed;
     text-align: left;
@@ -213,13 +217,13 @@ body.gpu{
     line-height: 15vh;
     padding-left: 20px;
 }
-
+/*Container for the content in general*/
 .contentGpu{
     display: flex;
     width: 100%;
     height: fit-content;
 }
-
+/*Container for images*/
 .containerGpuImg{
     padding-top: 20px;
     width: 30%;
@@ -229,31 +233,31 @@ body.gpu{
 .gpuImg{
     width: 30vw;
 }
-
+/*Text container*/
 .containerGpu{
     width: 100%;
     height: 100%;
     padding-left: 10px;
     padding-top: 20px;
 }
-
+/*References to a background color*/
 .red{
     background-image: radial-gradient( circle 972.6px at 10% 20%,  rgba(243,0,75,1) 0%, rgba(255,93,75,1) 90% );
     color: white;
     padding-bottom: 20px;
 }
-
+/*References to a background color*/
 .green{
     background-image: linear-gradient( 109.6deg,  rgba(33,103,43,1) 11.3%, rgba(117,162,61,1) 91.1% );
     padding-bottom: 20px;
     color: white;
 }
-
+/*Here is going to be shown the p using getByTagsName*/
 div.showLater{
     width: 100%;
     height: fit-content;
 }
-
+/*Another div for buttons*/
 div.buttonsGpu{
     width: 100%;
     text-align: center;
@@ -275,7 +279,7 @@ div.buttonsGpu button{
     font-size: 30px;
     line-height: normal;
 }
-
+/*These 3 classes are in charge of styling the new text showed*/
 .toShow dt{
     padding-left: 10px;
 }
@@ -289,12 +293,14 @@ div.buttonsGpu button{
     padding: 20px 0;
     background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );
 }
-/*Aqui termina las clases de la pagina gpus*/
+/*Here end the classes for 'gpus'*/
 
-/*Aqui comienza las clases de la pagina os*/
+/*Here begin the classes for 'OS'*/
+/*Body of os page*/
 body.os{
     overflow-x: hidden;
 }
+/*Header for os page*/
 div.headerOs{
     width: 100%;
     height: 20vh;
@@ -309,7 +315,7 @@ div.headerOs{
     color: white;
     line-height: 20vh;
 }
-
+/*Div for the index on the os page*/
 .os .index{
     display: flex;
     height: 100%;
@@ -321,14 +327,14 @@ div.headerOs{
 .logoT{
 
 }
-
+/*Properties of the logo*/
 .logo{
     height: 10vh;
     width: auto;
     line-height: 20vh;
     padding: 0 30px;
 }
-
+/*Div for the content on the page*/
 .content{
     margin-top: 50px;
     display: flex;
@@ -348,7 +354,7 @@ img.os{
     font-size: 30px;
     padding: 5px 30px;
 }
-
+/*Another div for buttons*/
 .os .buttons{
     width: 100%;
     margin: auto;
@@ -367,3 +373,5 @@ img.os{
 .os button:hover{
     font-size: 20px;
 }
+
+/*Here end the classes for OS*/
