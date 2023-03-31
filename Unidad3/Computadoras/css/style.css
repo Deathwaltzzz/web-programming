@@ -202,7 +202,7 @@ div.img{
 
 /*Here begin the classes of the page 'gpu'*/
 body.gpu{
-
+    background: url("../media/imgs/zotac-gpu-box-background-on.png");
 }
 /*Header for the page*/
 .header{
@@ -290,7 +290,7 @@ div.buttonsGpu button{
 
 .toShow{
     color: white;
-    padding: 20px 0;
+    padding: 20px 10px;
     background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );
 }
 /*Here end the classes for 'gpus'*/
@@ -299,6 +299,8 @@ div.buttonsGpu button{
 /*Body of os page*/
 body.os{
     overflow-x: hidden;
+    background: url('../media/imgs/Windows-11-Bloom-Screensaver-Dark-scaled.jpg') fixed;
+    background-size: 100%;
 }
 /*Header for os page*/
 div.headerOs{
@@ -324,8 +326,8 @@ div.headerOs{
     margin-right: 10px;
     max-width: 50%;
 }
-.logoT{
-
+.logoT:hover{
+    cursor: pointer;
 }
 /*Properties of the logo*/
 .logo{
@@ -344,15 +346,32 @@ div.headerOs{
     text-align: center;
     justify-content: center;
 }
+.os .content div{
+    flex: 1 0 21%;
+    margin: 10px;
+}
+.os .content button{
+    padding: 10px;
+    border-radius: 30px;
+}
 
 img.os{
     height: 120px;
     width: auto;
+    transition: .35s ease-in-out;
+    margin: 0 5px;
+    border-radius: 10px;
+}
+
+img.os:hover{
+    transition: .5s ease-in-out;
+    height: 150px;
 }
 
 .context p{
     font-size: 30px;
     padding: 5px 30px;
+    color: white;
 }
 /*Another div for buttons*/
 .os .buttons{
@@ -368,10 +387,16 @@ img.os{
     background: black;
     padding: 20px;
     border-radius: 30px;
+    margin-bottom: 10px;
 }
 
 .os button:hover{
     font-size: 20px;
+}
+
+.os a{
+    margin-top: 50px;
+    color: white;
 }
 
 /*Here end the classes for OS*/

@@ -232,24 +232,37 @@ if(window.location.href.includes('index.html')){
             window.location.href = 'Gpus.html';
         })
     }
-//     I worked first on the 4th page, thats why its here xd
+//     I worked first on the 4th page, that's why its here xd
 }else if(window.location.href.includes('os.html')){
     window.onload = () =>{
+        // Reloads the page when the logo is clicked
+        document.querySelector('.logoT').addEventListener('click',()=>{
+            location.reload();
+        })
+        // Loads the first text of description for the page, later is gonna be used as a container for every os description
         document.querySelector('.context p').innerHTML = 'An operating system (OS) is a software program that manages computer hardware and provides common services for computer programs. Windows is an operating system created by Microsoft, Linux is an open-source operating system, and Mac OS is an operating system created by Apple Inc. They have evolved significantly over the years, becoming more user-friendly, feature-rich, and secure, and play a critical role in enabling people to use computers for various purposes.'
-        const imgs = ['../media/imgs/MS-DOS_logo_outlined.svg.png','../media/imgs/tux.png','../media/imgs/windows-95-logo-1864241.webp','../media/imgs/w7.webp','../media/imgs/ubuntu.webp','../media/imgs/kali.jpg','../media/imgs/fedora32.jpg','../media/imgs/w10.png']
+        var imgs = ['../media/imgs/MS-DOS_logo_outlined.svg.png','../media/imgs/tux.png','../media/imgs/windows-95-logo-1864241.webp','../media/imgs/w7.webp','../media/imgs/ubuntu.webp','../media/imgs/kali.jpg','../media/imgs/fedora32.jpg','../media/imgs/w10.png']
         const ids = ['msdos','linux','w95','w7','ubuntu','kali','fedora','w10']
         // Appending the 8 elements of the array to the html with a function
-        function addArray(){
-            for (let i = 0; i < imgs.length; i++) {
-                document.getElementById('content').innerHTML += `<div id=${ids[i]}><img class="os" src="${imgs[i]}"></div>`
+        function addArray(imgs){
+            if(document.getElementsByClassName('changeOs').item(0).dataset.clicked === 'false'){
+                for (let i = 0; i < imgs.length; i++) {
+                    document.getElementById('content').innerHTML += `<div id=${ids[i]}><img class="os" src="${imgs[i]}"></div>`
+                }
+                changeArray()
+                document.getElementsByClassName('changeOs').item(0).dataset.clicked = 'true';
+                loadInfo()
+            }else{
+                for (let i = 0; i < imgs.length; i++) {
+                    document.getElementById('content').innerHTML += `<div id=${ids[i]}><img class="os" src="${imgs[i]}"></div>`
+                }
             }
-            changeArray()
         }
         const addArrays = document.getElementById('disappearThis');
         // When you click the button to load the images it calls the function
         addArrays.addEventListener('click',() =>{
             addArrays.style.display = 'none'
-            addArray();
+            addArray(imgs);
         })
         // After the function to load images is called, it will then call another function to ensure that the script doesn't break.
         function changeArray(){
@@ -261,10 +274,18 @@ if(window.location.href.includes('index.html')){
                 let changeArr = prompt(`What OS you wish to load to the images?, possible options are: ${possibleOptions.toString()}, ANY OTHER VALUE WILL RELOAD THE PAGE`, ' ');
                 switch (parseInt(changeArr)){
                     case 1:
-                        change.innerHTML = `<img class="os" src="${possible[parseInt(changeArr)-1]}">`
+                        imgs[4] = possible[parseInt(changeArr)-1]
+                        removeArray()
+                        addArray(imgs)
+                        document.getElementById(`ubuntu`).id = 'mac'
+                        loadInfo()
                         break;
                     case 2:
-                        change.innerHTML = `<img class="os" src="${possible[parseInt(changeArr)-1]}">`
+                        imgs[4] = possible[parseInt(changeArr)-1]
+                        removeArray();
+                        addArray(imgs)
+                        document.getElementById(`ubuntu`).id = 'android'
+                        loadInfo()
                         break;
                     default:
                         alert('The page will reload!')
@@ -273,6 +294,84 @@ if(window.location.href.includes('index.html')){
                 }
             })
         }
+        // Is the one in charge to load a description of every os in the page
+        function loadInfo(){
+            var infoimgs = document.querySelectorAll('div.content div');
+            console.log(infoimgs)
+            for (let i = 0; i < infoimgs.length; i++) {
+                const info = infoimgs[i]
+                info.addEventListener('click',()=>{
+                    var id = info.id;
+                    switchInfo(id)
+                })
+            }
+            function switchInfo(id){
+                let switcher = document.querySelector('.context p');
+                switch(id){
+                    //const ids = ['msdos','linux','w95','w7','ubuntu','kali','fedora','w10']
+                    case 'linux':
+                        switcher.innerHTML = 'Linux is a family of open-source operating systems that are based on the Unix operating system. It was first created by Linus Torvalds in 1991 and has since grown to become one of the most popular and widely used operating systems in the world. Linux is known for its flexibility and customizability, as well as its stability and security. It is used in a wide range of devices, from servers and supercomputers to mobile phones and embedded devices. One of the key features of Linux is its ability to run multiple programs simultaneously, allowing for greater efficiency and productivity. Additionally, Linux has a large and active community of developers who contribute to its ongoing development and improvement, and many popular software applications are available for Linux.'
+                        break;
+                    case 'msdos':
+                        switcher.innerHTML = 'MS-DOS (short for Microsoft Disk Operating System) is an operating system for personal computers that was developed by Microsoft Corporation in the early 1980s. It was one of the most widely used operating systems during the 1980s and 1990s, particularly in the IBM PC-compatible market. MS-DOS was a command-line interface operating system, which means that users interacted with the system by typing commands on a keyboard. It did not have a graphical user interface like modern operating systems do. MS-DOS provided a basic set of tools and commands for managing files, running programs, and interacting with hardware devices such as printers and disk drives. Although it has been largely superseded by more modern operating systems such as Microsoft Windows, some versions of MS-DOS are still used in embedded systems and other specialized applications.'
+                        break;
+                    case 'w95':
+                        switcher.innerHTML = 'Windows 95 was a major operating system release by Microsoft, launched in 1995. It was the successor to Windows 3.1 and was designed to be more user-friendly and feature-rich than its predecessors. Windows 95 introduced many new features that are now considered standard in modern operating systems, such as the Start menu, taskbar, and plug-and-play support for hardware devices. It also included long filenames (up to 255 characters), 32-bit software support, and the ability to run multiple programs simultaneously without requiring a separate program manager. Windows 95 was the first Windows operating system to become widely popular and was a major milestone in the history of personal computing. It was eventually superseded by newer versions of Windows, but its impact can still be felt in many aspects of modern computing.';
+                        break;
+                    case 'w7':
+                        switcher.innerHTML = 'Windows 7 is an operating system developed by Microsoft Corporation and released in 2009. It was the successor to Windows Vista and offered many improvements over its predecessor, including faster boot times, improved performance, and a more streamlined interface. Windows 7 was designed to be more user-friendly and intuitive than previous versions of Windows, with features such as Jump Lists, Aero Snap, and the ability to create homegroups for easy file sharing. It also included improved support for touchscreens and mobile devices, as well as enhanced security features such as BitLocker encryption and AppLocker application control. Windows 7 was a very popular operating system and remained so until its end-of-life in January 2020, at which point Microsoft stopped providing support and security updates for the system.'
+                        break;
+                    case 'ubuntu':
+                        switcher.innerHTML = 'Ubuntu is a free and open-source Linux-based operating system that is based on the Debian architecture. It was created by Canonical Ltd. and released in 2004. Ubuntu is known for its ease of use, simplicity, and user-friendly interface, and it is designed to be accessible to users of all levels of experience. It comes with a wide range of pre-installed software applications, including a web browser, email client, office suite, media player, and more. Additionally, Ubuntu has a large and active community of developers and users who contribute to its development and provide support and resources for users. Ubuntu is a popular choice for both desktop and server environments, and it is used by individuals, organizations, and governments around the world.'
+                        break;
+                    case 'kali':
+                        switcher.innerHTML = 'Kali Linux is a Debian-based Linux distribution that is designed for digital forensics, penetration testing, and security auditing. It was created by Offensive Security, a cybersecurity training company, and was first released in 2013. Kali Linux includes a wide range of tools and utilities that are commonly used by security professionals and hackers for network analysis, vulnerability scanning, password cracking, and other security-related tasks. Some of the tools included in Kali Linux are Nmap, Metasploit, John the Ripper, Wireshark, and Aircrack-ng. Kali Linux is known for its security-focused features, and it is widely used by security professionals, researchers, and students in the field of cybersecurity.'
+                        break;
+                    case 'fedora':
+                        switcher.innerHTML = 'Fedora is a free and open-source Linux-based operating system that is sponsored by Red Hat. It was first released in 2003 and is designed to be a cutting-edge operating system that showcases the latest technologies and features in the open-source community. Fedora is known for its rapid development cycle and its commitment to staying up-to-date with the latest software releases. It includes a wide range of pre-installed software applications, including a web browser, office suite, media player, and development tools. Fedora is also known for its support for containerization technologies such as Docker and Kubernetes, which make it popular with developers and DevOps professionals. Additionally, Fedora has a large and active community of developers and users who contribute to its ongoing development and improvement. Fedora is often used as a desktop operating system, but it can also be used in server and cloud environments.'
+                        break;
+                    case 'w10':
+                        switcher.innerHTML = 'Windows 10 is an operating system developed by Microsoft Corporation and released in 2015. It is the successor to Windows 8.1 and was designed to be more familiar and user-friendly than its predecessor. Windows 10 includes a wide range of features and improvements, including the return of the Start menu, virtual desktops, a new web browser (Microsoft Edge), and improved multitasking capabilities. It also includes support for new technologies such as Cortana (a voice-activated personal assistant), the Windows Hello biometric authentication system, and the Microsoft Store for downloading and installing apps. Windows 10 is designed to work across a wide range of devices, including desktops, laptops, tablets, and mobile phones, and it includes support for touchscreens and stylus input. It is also known for its regular feature updates and security patches, which are designed to keep the operating system up-to-date and secure. Windows 10 is currently the most widely used desktop operating system in the world.'
+                        break;
+                    case 'android':
+                        switcher.innerHTML = 'Android is a mobile operating system developed by Google and designed primarily for touchscreen devices such as smartphones, tablets, and smartwatches. It was first released in 2008 and has since become the most widely used mobile operating system in the world. Android is based on the Linux kernel and is open-source, meaning that its source code is available for anyone to use and modify. Android includes a wide range of built-in features and applications, such as a web browser, email client, calendar, contacts, messaging app, and Google Play Store for downloading and installing additional apps. Android also includes support for various connectivity options such as Wi-Fi, Bluetooth, and mobile data, as well as features like voice recognition, location services, and advanced camera capabilities. Android is known for its flexibility and customization options, and it is used by a wide range of manufacturers to power their devices.'
+                        break;
+                    case 'mac':
+                        switcher.innerHTML = 'Mac OS is a series of proprietary operating systems developed by Apple Inc. for their Macintosh line of computers. The first version of Mac OS was released in 1984, and since then, it has gone through several major revisions and name changes. The latest version is called macOS Monterey, which was released in 2021. macOS is known for its user-friendly interface and design, as well as its seamless integration with other Apple products and services, such as iCloud, iMessage, and FaceTime. It includes a range of pre-installed software applications, such as a web browser, email client, office suite, media player, and creative tools like iMovie and GarageBand. macOS is based on the Unix operating system and includes a terminal interface for advanced users and developers. It is also known for its strong security features, such as Gatekeeper, FileVault, and the use of the Apple T2 Security Chip. macOS is exclusive to Apple hardware and is not available for use on other manufacturers\' computers.';
+                        break;
+
+
+                }
+            }
+        }
+        // Removes the previously appended images to load the new array modifying the 5th index
+        function removeArray(){
+            document.getElementById('content').innerHTML = " ";
+        }
+
+        const selectBg = document.querySelectorAll('.logo')
+        console.log(selectBg)
+        for (let i = 0; i < selectBg.length; i++) {
+            let selected = selectBg[i]
+            selected.addEventListener('click',()=>{
+                switchBg(selected.id)
+            })
+        }
+
+        function switchBg(id){
+            console.log(id)
+            switch(id){
+                case 'win':
+                    document.body.style.background = 'url(../media/imgs/Windows-11-Bloom-Screensaver-Dark-scaled.jpg) fixed'
+                    document.body.style.backgroundSize = '100%'
+                    break;
+                case 'lin':
+                    document.body.style.background = 'url(../media/imgs/linuxWall.png'
+                    document.body.style.backgroundSize = '100%'
+                    break;
+            }
+        }
+
     }
 }else if(window.location.href.includes('Gpus.html')){
     window.onload = () =>{
